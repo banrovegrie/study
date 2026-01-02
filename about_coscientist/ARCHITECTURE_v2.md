@@ -41,7 +41,7 @@ MEMORY = WORKING (local world model) + LIBRARY (global world model)
 │                                                                                  │
 │                           VERIFICATION CASCADE                                   │
 │                                                                                  │
-│   NUMERICAL ──▶ SYMBOLIC ──▶ TYPE-LEVEL ──▶ TACTIC ──▶ PROOF SEARCH ──▶ FULL     │
+│   NUMERICAL ──▶ ARGUMENT ──▶ SYMBOLIC ──▶ TYPE-LEVEL ──▶ TACTIC ──▶ FULL         │
 │                                                                                  │
 │   fast/cheap              ◀── iterate here ──▶                    slow/certain   │
 │   sanity check            md + latex + lean + sorry               no sorry's     │
@@ -180,13 +180,13 @@ Auto-updated whenever proof.lean changes:
     {
       "target": "P n",
       "hypotheses": [
-        {"name": "n", "type": "ℕ"},
-        {"name": "ih", "type": "∀ k < n, P k"}
+        { "name": "n", "type": "ℕ" },
+        { "name": "ih", "type": "∀ k < n, P k" }
       ],
-      "location": {"line": 23}
+      "location": { "line": 23 }
     }
   ],
-  "sorries": [{"location": "line 25", "goal": "P n"}],
+  "sorries": [{ "location": "line 25", "goal": "P n" }],
   "errors": []
 }
 ```
@@ -308,8 +308,6 @@ A technique from number theory becomes applicable to combinatorics if the **goal
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
----
-
 ## TOOLS
 
 ### Lean Tools (Verification)
@@ -325,7 +323,7 @@ lean_tactic(goal: str, hypotheses: list, tactic: str) -> {result, new_goals, err
     # Apply a tactic, return result
 
 lean_search(query: str, by: "embedding" | "type") -> [theorems]
-    # Search Mathlib
+    # Search Mathlib and lean across library and everything
 ```
 
 ### Compute Tools (Verification Cascade)
@@ -389,23 +387,21 @@ tree_set_focus(node_id: str) -> {}
     # Set current focus
 ```
 
----
-
 ## SKILLS
 
 Reusable prompt strategies:
 
-| Skill | Purpose |
-|-------|---------|
-| `/skill/understand` | Classify problem, find similar solved, identify structure |
-| `/skill/strategize` | Generate approaches, evaluate tradeoffs, choose strategy |
-| `/skill/explore` | Generate 2-3 distinct approaches for a goal |
-| `/skill/formalize` | Convert informal step to Lean (possibly with sorry) |
-| `/skill/diagnose` | Interpret Lean error, extract constraint, suggest fix |
-| `/skill/reflect` | Review strategy, assumptions, checkpoints; trigger self-correction |
-| `/skill/extract` | From completed proof, extract techniques, lessons, reusable lemmas |
-
----
+| Skill                | Purpose                                                                |
+| -------------------- | ---------------------------------------------------------------------- |
+| `/skill/understand`  | Classify problem, find similar solved, identify structure              |
+| `/skill/strategize`  | Generate approaches, evaluate tradeoffs, choose strategy               |
+| `/skill/explore`     | Generate 2-3 distinct approaches for a goal                            |
+| `/skill/formalize`   | Convert informal step to Lean (possibly with sorry)                    |
+| `/skill/diagnose`    | Interpret Lean error, extract constraint, suggest fix                  |
+| `/skill/reflect`     | Review strategy, assumptions, checkpoints; trigger self-correction     |
+| `/skill/extract`     | From completed proof, extract techniques, lessons, reusable lemmas     |
+| `/skill/adversarial` | Attack a claim: find counterexamples, hidden assumptions, logical gaps |
+| `/skill/multipath`   | Generate k independent derivations of a claim, check agreement         |
 
 ## Verification Cascade
 
@@ -421,35 +417,46 @@ Reusable prompt strategies:
 │  Output: Counterexample OR confidence boost                                  │
 │  Time: <1 second                                                             │
 │                                                                              │
-│  LEVEL 1: SYMBOLIC               "Can we simplify/verify algebraically?"     │
+│  LEVEL 1: ARGUMENT               "Is the reasoning logically sound?"         │
+│  ───────────────────────────────────────────────────────────                 │
+│  Tool: Claude reasoning (prose + LaTeX)                                      │
+│  Check: Articulate proof sketch in natural language                          │
+│         - Are the steps logically connected?                                 │
+│         - Are there hidden assumptions?                                      │
+│         - Does the argument structure make sense?                            │
+│         - Can we identify the key insight?                                   │
+│  Output: Structured argument (md + LaTeX) OR identified gaps                 │
+│  Time: Seconds to minutes                                                    │
+│                                                                              │
+│  LEVEL 2: SYMBOLIC               "Can we simplify/verify algebraically?"     │
 │  ───────────────────────────────────────────────────────────                 │
 │  Tool: compute_symbolic                                                      │
 │  Check: Symbolic manipulation, limits, series                                │
 │  Output: Simplified form OR stuck point                                      │
 │  Time: 1-30 seconds                                                          │
 │                                                                              │
-│  LEVEL 2: TYPE-LEVEL             "Does this typecheck in Lean?"              │
+│  LEVEL 3: TYPE-LEVEL             "Does this typecheck in Lean?"              │
 │  ───────────────────────────────────────────────────────────                 │
 │  Tool: lean_elaborate                                                        │
 │  Check: Can we STATE this formally?                                          │
 │  Output: Lean type OR type errors (constraint discovery)                     │
 │  Time: 1-10 seconds                                                          │
 │                                                                              │
-│  LEVEL 3: TACTIC PROBING         "Which tactics make progress?"              │
+│  LEVEL 4: TACTIC PROBING         "Which tactics make progress?"              │
 │  ───────────────────────────────────────────────────────────                 │
 │  Tool: lean_tactic                                                           │
 │  Check: Try simp, ring, omega, linarith, aesop on each sorry                 │
 │  Output: Closed sorries OR remaining goals                                   │
 │  Time: 1-60 seconds per sorry                                                │
 │                                                                              │
-│  LEVEL 4: PROOF SEARCH           "Can automation find the proof?"            │
+│  LEVEL 5: PROOF SEARCH           "Can automation find the proof?"            │
 │  ───────────────────────────────────────────────────────────                 │
 │  Tool: lean_check with Duper/Hammer/Polyrith                                 │
 │  Check: Let ATP/SMT solvers try                                              │
 │  Output: Complete proof OR timeout                                           │
 │  Time: 1-300 seconds                                                         │
 │                                                                              │
-│  LEVEL 5: HUMAN-GUIDED           "What insight closes remaining gaps?"       │
+│  LEVEL 6: GUIDED ITERATION       "What insight closes remaining gaps?"       │
 │  ───────────────────────────────────────────────────────────                 │
 │  Tool: Claude reasoning + all above                                          │
 │  Check: Iterate on remaining sorries with informal insight                   │
@@ -460,12 +467,201 @@ Reusable prompt strategies:
 ```
 
 Each level produces **information** that feeds back:
+
 - Numerical counterexample → abandon approach
+- Argument gap → missing lemma, hidden assumption, or flawed logic
+- Symbolic stuck point → need different algebraic approach
 - Type error → discovered constraint
 - Tactic failure → prune technique, try alternative
 - Partial success → update gap tracker
 
----
+Hybrid Verification: Not everything can be fully formalized. Mathlib doesn't cover all mathematics. Frontier research may lack formal foundations. The realistic operating mode is partial Lean + natural language:
+
+```
+VERIFICATION SPECTRUM
+
+FULLY FORMAL              SEMI-FORMAL                    INFORMAL
+(Lean, no sorry)          (Lean fragments + NL)          (pure reasoning)
+      │                          │                            │
+      ▼                          ▼                            ▼
+ ground truth              partial ground truth          no ground truth
+ Lean is arbiter           Lean for fragments,           need confidence
+                           confidence for gaps            mechanisms
+```
+
+For the **informal gaps**, we need confidence mechanisms beyond Lean:
+
+### Adversarial Probing
+
+A dedicated adversarial agent that tries to **break** the argument before we commit to it:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           ADVERSARIAL PROBE                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  TRIGGER: Before committing significant effort to formalizing a claim       │
+│                                                                             │
+│  1. COUNTEREXAMPLE SEARCH                                                   │
+│     ├── Random testing across parameter space                               │
+│     ├── Edge cases: 0, 1, -1, ∞, boundary conditions                        │
+│     ├── Adversarial examples: what inputs would break this?                 │
+│     └── If found → abandon immediately, save counterexample                 │
+│                                                                             │
+│  2. ASSUMPTION ATTACK                                                       │
+│     ├── List all assumptions (explicit and implicit)                        │
+│     ├── For each: "What if this assumption is false?"                       │
+│     ├── "What unstated conditions does this require?"                       │
+│     └── If hole found → flag, may need additional lemma                     │
+│                                                                             │
+│  3. LOGICAL STRUCTURE ATTACK                                                │
+│     ├── Is the argument form valid? (modus ponens, induction, etc.)         │
+│     ├── Are there logical gaps between steps?                               │
+│     ├── Does the conclusion actually follow?                                │
+│     └── If invalid → restructure argument                                   │
+│                                                                             │
+│  4. SIMILAR FAILURE SEARCH                                                  │
+│     ├── kb_search: have similar approaches failed before?                   │
+│     ├── What went wrong in those cases?                                     │
+│     └── Does this argument avoid those pitfalls?                            │
+│                                                                             │
+│  OUTPUT: { survived: bool, attacks_tried: [...], vulnerabilities: [...] }   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Voting and Self-Consistency
+
+For informal portions where Lean can't arbitrate, use **convergent evidence**:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         VOTING / SELF-CONSISTENCY                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  WHEN TO USE: Informal argument steps, approach selection, key claims       │
+│                                                                             │
+│  1. MULTI-PATH DERIVATION                                                   │
+│     ├── Generate k=3 independent reasoning paths to same claim              │
+│     ├── Different approaches, different intermediate steps                  │
+│     ├── If all agree → high confidence                                      │
+│     ├── If disagree → investigate divergence, likely bug                    │
+│     └── Disagreement is SIGNAL, not noise                                   │
+│                                                                             │
+│  2. APPROACH VOTING (for strategy selection)                                │
+│     ├── Generate n candidate approaches                                     │
+│     ├── Score each on:                                                      │
+│     │   • Similarity to solved problems (LIBRARY retrieval)                 │
+│     │   • Technique success rate (historical data)                          │
+│     │   • Structural match to goal pattern                                  │
+│     │   • Preliminary progress (quick tactic probe)                         │
+│     ├── Allocate effort proportional to score                               │
+│     └── NOT opinion voting—grounded in evidence                             │
+│                                                                             │
+│  3. CLAIM CONFIDENCE AGGREGATION                                            │
+│     ├── For each informal claim, aggregate:                                 │
+│     │   • Did it survive adversarial probe?                                 │
+│     │   • Do multiple reasoning paths agree?                                │
+│     │   • Is it consistent with LIBRARY knowledge?                          │
+│     │   • Did numerical testing support it?                                 │
+│     ├── Confidence = f(evidence sources)                                    │
+│     └── Track confidence per step, propagate to proof                       │
+│                                                                             │
+│  4. PASS@K FOR TACTICS                                                      │
+│     ├── For each sorry/goal, try k tactics in parallel                      │
+│     ├── k = f(goal complexity, compute budget)                              │
+│     ├── Keep ALL that make progress (may solve different subgoals)          │
+│     └── This is empirical selection with ground truth (Lean)                │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Confidence Tracking
+
+Track verification level explicitly for each proof step:
+
+```json
+{
+  "step_id": "inductive_step",
+  "claim": "P(n) → P(n+1) for all n ≥ 1",
+  "verification": {
+    "lean_verified": false,
+    "lean_typechecks": true,
+    "lean_fragments": ["base_case", "arithmetic_lemma"],
+    "numerically_tested": { "range": [1, 10000], "passed": true },
+    "adversarial_survived": true,
+    "self_consistent": { "paths": 3, "agree": true },
+    "cross_referenced": ["similar to Theorem 4.2 in library"]
+  },
+  "confidence": 0.87,
+  "gaps": [
+    {
+      "description": "Continuity assumption used but not proven",
+      "would_resolve": "Mathlib PR #12345"
+    }
+  ]
+}
+```
+
+### Verification Tools (for Hybrid Mode)
+
+```python
+verify_adversarial(claim: str, context: dict) -> {survived, attacks, vulnerabilities}
+    # Run adversarial probe on a claim
+
+verify_self_consistency(claim: str, k: int) -> {paths, agreement, confidence}
+    # Generate k independent derivations, check agreement
+
+verify_cross_reference(claim: str) -> {consistent, contradictions, supporting}
+    # Check claim against LIBRARY knowledge
+
+confidence_aggregate(step_id: str) -> {confidence, breakdown, gaps}
+    # Aggregate all verification signals for a step
+```
+
+### Proof Status Output
+
+Instead of binary "proven/not proven", output verification breakdown:
+
+```
+PROOF STATUS: 73% formally verified
+
+VERIFIED (Lean, ground truth):
+├── Base case ✓
+├── Arithmetic lemmas ✓
+└── Final assembly ✓
+
+HIGH CONFIDENCE (0.9+, multiple checks passed):
+├── Inductive step structure
+│   └── 3 consistent paths, adversarial-tested, numerically verified
+└── Bound estimation
+    └── Numerically verified to n=10^6, cross-referenced
+
+MEDIUM CONFIDENCE (0.7-0.9):
+└── Continuity claim in step 7
+    └── Adversarial-survived, but only 1 derivation path
+
+GAPS (explicit):
+├── Measure-theoretic detail
+│   └── Would need: Integration theory (not in Mathlib)
+└── Unpublished lemma dependency
+    └── Would need: Verify with author or prove independently
+
+WHAT WOULD COMPLETE FORMALIZATION:
+├── Mathlib PR #12345 (continuity lemmas)
+└── ~2 days manual formalization of Lemma 4.2
+```
+
+### When to Use What
+
+| Verification Target | Has Lean? | Method                                     |
+| ------------------- | --------- | ------------------------------------------ |
+| Formalizable claim  | Yes       | Lean (ground truth)                        |
+| Informal bridge     | No        | Adversarial + Self-consistency + Cross-ref |
+| Approach selection  | N/A       | Voting on evidence (not opinions)          |
+| Tactic selection    | Yes       | Pass@k (empirical)                         |
+| Novel claim         | No        | Numerical + Adversarial + Multi-path       |
+| Strategy decision   | N/A       | Progress metrics + LIBRARY retrieval       |
 
 ## Semi-Formal: The Iteration Sweet Spot
 
@@ -492,8 +688,6 @@ SEMI-FORMAL
 
 The semi-formal representation is where most productive work happens. Full formalization is the end goal; informal is the starting point; semi-formal is where you iterate.
 
----
-
 ## The Reasoning Loop
 
 ```
@@ -516,8 +710,6 @@ THINK → EXPERIMENT → REFLECT → LEARN → (back to THINK)
 - `unknown identifier` → need different import or theorem doesn't exist
 - `tactic failed` → this approach doesn't work, try another
 - `sorry filled successfully` → subgoal is tractable, structure is sound
-
----
 
 ## Exploration: Graph of Thought
 
@@ -546,13 +738,12 @@ THINK → EXPERIMENT → REFLECT → LEARN → (back to THINK)
 ```
 
 The exploration tree (`exploration.json`) captures this structure:
+
 - Multiple approaches can be explored
 - Each approach decomposes into steps
 - Steps can have sub-approaches
 - Branches can be pruned (abandoned) or merged
 - Status tracks: `not_started`, `in_progress`, `done`, `abandoned`
-
----
 
 ## Tactics Library
 
@@ -592,8 +783,6 @@ The exploration tree (`exploration.json`) captures this structure:
 ```
 
 Stored in LIBRARY (Neo4j Technique nodes), indexed by goal pattern, learned from successful proofs.
-
----
 
 ## The Flow
 
@@ -657,8 +846,6 @@ Stored in LIBRARY (Neo4j Technique nodes), indexed by goal pattern, learned from
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
----
-
 ## Future: Neural Memory
 
 Current design is **neural-ready**:
@@ -669,8 +856,6 @@ Current design is **neural-ready**:
 - **Learned Embeddings**: Fine-tuned on mathematical text
 
 The interfaces stay the same; the backend can evolve from structured storage to neural backends.
-
----
 
 ## Summary
 
@@ -687,6 +872,7 @@ KEPLER = Claude Code (ORCHESTRATOR)
        ├── TOOLS
        │   ├── lean_*           Verification (ground truth)
        │   ├── compute_*        Numerical + symbolic
+       │   ├── verify_*         Adversarial, self-consistency, cross-ref
        │   ├── kb_*             Knowledge base queries
        │   ├── plan_*           Planning state management
        │   └── tree_*           Exploration tree management
@@ -713,8 +899,10 @@ KEPLER = Claude Code (ORCHESTRATOR)
                    └── Communities (auto-clustered)
 ```
 
-**Core Principle**: Retrieve by applicability, not aboutness.
+**Notes**:
 
-**Key Innovation**: Bidirectional formal-informal reasoning loop where Lean verification informs exploration and exploration drives formalization.
-
-**The Flywheel**: Solve → Learn → Solve Better. Every proof attempt teaches something. The LIBRARY grows. Future proofs benefit.
+- Bidirectional formal-informal reasoning loop where Lean verification informs exploration and exploration drives formalization
+- Hybrid verification: Lean for formalizable portions, adversarial probing + voting + self-consistency for informal gaps
+- Honest confidence tracking: not binary "proven/not proven" but verification breakdown with explicit gaps
+- Strong trial and error. Solve → Learn → Solve Better.
+- Retrieve by applicability, not aboutness.
