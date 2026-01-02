@@ -1,0 +1,1543 @@
+\begin{thebibliography}{100}
+
+\bibitem{AEcolab}
+{Mathematical results Colab for AlphaEvolve paper}.
+\newblock \url{https://colab.research.google.com/github/google-deepmind/alphaevolve\_results/blob/master/mathematical\_results.ipynb}.
+\newblock Accessed: 2025-09-27.
+
+\bibitem{aim2006problems}
+Problems from the workshop on ``{L}ow {E}igenvalues of {L}aplace and {S}chr\"{o}dinger {O}perators''.
+\newblock American Institute of Mathematics Workshop, May 2006.
+
+\bibitem{ErdosProblems106}
+Problem \#106.
+\newblock \url{https://www.erdosproblems.com/106}, 2024.
+\newblock Erdős Problems database.
+
+\bibitem{Aldaz_1998}
+J.~M. Aldaz.
+\newblock Remarks on the {H}ardy–{L}ittlewood maximal function.
+\newblock {\em Proceedings of the Royal Society of Edinburgh: Section A Mathematics}, 128(1):1–9, 1998.
+
+\bibitem{ventullo}
+Boris Alexeev, Evan Conway, Matthieu Rosenfeld, Andrew~V. Sutherland, Terence Tao, Markus Uhr, and Kevin Ventullo.
+\newblock Decomposing a factorial into large factors, 2025.
+\newblock arXiv:2503.20170.
+
+\bibitem{alfarano2024global}
+Alberto Alfarano, Fran{\c{c}}ois Charton, and Amaury Hayat.
+\newblock Global {L}yapunov functions: a long-standing open problem in mathematics, with symbolic transformers.
+\newblock In {\em Advances in Neural Information Processing Systems}, volume~37. Curran Associates, Inc., 2024.
+
+\bibitem{mfo2009report}
+Mark~S. Ashbaugh, Rafael~D. Benguria, Richard~S. Laugesen, and Timo Weidl.
+\newblock Low {E}igenvalues of {L}aplace and {S}chr\"{o}dinger {O}perators.
+\newblock {\em Oberwolfach Rep.}, 6(1):355--428, 2009.
+
+\bibitem{audet_hansen_messine_2010}
+Charles Audet, Xavier Fournier, Pierre Hansen, and Fr\'{e}d\'{e}ric Messine.
+\newblock Extremal problems for convex polygons.
+\newblock {\em Journal of Global Optimization}, 38(2):163--179, 2010.
+
+\bibitem{babenko}
+K.~I. Babenko.
+\newblock An inequality in the theory of {F}ourier integrals.
+\newblock {\em Izv. Akad. Nauk SSSR Ser. Mat.}, 25:531--542, 1961.
+
+\bibitem{baek}
+Jineon Baek.
+\newblock Optimality of {G}erver's {S}ofa, 2024.
+\newblock arXiv:2411.19826.
+
+\bibitem{BKU24}
+Jineon Baek, Junnosuke Koizumi, and Takahiro Ueoro.
+\newblock A note on the {E}rdos conjecture about square packing, 2024.
+\newblock arXiv:2411.07274.
+
+\bibitem{balisteretal}
+P.~Balister, B.~Bollob{\'a}s, R.~Morris, J.~Sahasrabudhe, and M.~Tiba.
+\newblock Flat {L}ittlewood polynomials exist.
+\newblock {\em Annals of Mathematics}, 192(3):977--1004, 2020.
+
+\bibitem{balko}
+Martin Balko, Adam Sheffer, and Ruiwen Tang.
+\newblock The constant of point-line incidence constructions.
+\newblock {\em Comput. Geom.}, 114:14, 2023.
+\newblock Id/No 102009.
+
+\bibitem{balingeretal}
+B.~Ballinger, G.~Blekherman, H.~Cohn, N.~Giansiracusa, E.~Kelly, and A.~Sch{\"u}rmann.
+\newblock Experimental study of energy-minimizing point configurations on spheres.
+\newblock {\em Experimental Mathematics}, 18:257--283, 2009.
+
+\bibitem{BBCGKS2006}
+Bradon Ballinger, Grigoriy Blekherman, Henry Cohn, Noah Giansiracusa, Elizabeth Kelly, and Achill Sch\"urmann.
+\newblock {Minimal Energy Configurations for N Points on a Sphere in n Dimensions}.
+\newblock \url{https://aimath.org/data/paper/BBCGKS2006/}, 2006.
+
+\bibitem{banakh2019difference}
+Taras~O Banakh and Volodymyr~M Gavrylkiv.
+\newblock Difference bases in cyclic groups.
+\newblock {\em Journal of Algebra and Its Applications}, 18(05):1950081, 2019.
+
+\bibitem{barnard-steinerberger}
+R.~C. Barnard and S.~Steinerberger.
+\newblock Three convolution inequalities on the real line with connections to additive combinatorics.
+\newblock {\em Journal of Number Theory}, 207:42--55, 2020.
+
+\bibitem{bateman_erdos_1951}
+Paul Bateman and Paul Erd\H{o}s.
+\newblock Geometrical extrema suggested by a lemma of {B}esicovitch.
+\newblock {\em American Mathematical Monthly}, 58:306--314, 1951.
+
+\bibitem{beardon2002}
+A.~F. Beardon, D.~Minda, and T.~W. Ng.
+\newblock Smale's mean value conjecture and the hyperbolic metric.
+\newblock {\em Mathematische Annalen}, 332:623--632, 2002.
+
+\bibitem{beckner}
+W.~Beckner.
+\newblock Inequalities in {F}ourier analysis.
+\newblock {\em Annals of Mathematics}, 102(1):159--182, 1975.
+
+\bibitem{bellec2024optimizing}
+Pierre~C. Bellec and Tobias Fritz.
+\newblock Optimizing over iid distributions and the beat the average game, 2024.
+\newblock arXiv:2412.15179.
+
+\bibitem{bengurialoss}
+R.~D. Benguria and M.~Loss.
+\newblock Connection between the {L}ieb-{T}hirring conjecture for {S}chr{\"o}dinger operators and an isoperimetric problem for ovals on the plane.
+\newblock {\em Contemporary Mathematics}, 362:53--61, 2004.
+
+\bibitem{berger1965}
+C.~Berger.
+\newblock A strange dilation theorem.
+\newblock {\em Notices of the American Mathematical Society}, 12:590, 1965.
+\newblock Abstract 625--152.
+
+\bibitem{berman1970volumes}
+J.~D. Berman and K.~Hanes.
+\newblock Volumes of polyhedra inscribed in the unit sphere in {$E^3$}.
+\newblock {\em Mathematische Annalen}, 188:78--84, 1970.
+
+\bibitem{berthold2025best}
+Timo Berthold.
+\newblock {Best Global Optimization Solver}.
+\newblock FICO Blog, June 2025.
+\newblock Accessed September 5, 2025.
+
+\bibitem{bezdek2005}
+A.~Bezdek.
+\newblock On the number of mutually touching cylinders.
+\newblock In {\em Combinatorial and Computational Geometry}, volume~52 of {\em MSRI Publication}, pages 121--127. 2005.
+
+\bibitem{bezdek_fodor_1999}
+Andr\'{a}s Bezdek and Ferenc Fodor.
+\newblock Extremal point sets.
+\newblock {\em Proceedings of the American Mathematical Society}, 127(1):165--173, 1999.
+
+\bibitem{besicovitch}
+A.~Bezikovi{\v{c}}.
+\newblock Sur deux questions de l'int{\'e}grabilit{\'e} des fonctions.
+\newblock {\em J. Soc. Phys. Math. Univ. Perm}, 2:105--123, 1919.
+
+\bibitem{bhatia2007positive}
+R.~Bhatia.
+\newblock {\em {Positive Definite Matrices}}.
+\newblock Princeton Series in Applied Mathematics. Princeton University Press, Princeton, NJ, 2007.
+
+\bibitem{bhatia2008matrix}
+R.~Bhatia and F.~Kittaneh.
+\newblock The matrix arithmetic-geometric mean inequality revisited.
+\newblock {\em Linear Algebra and its Applications}, 428(8--9):2177--2191, 2008.
+
+\bibitem{block-error}
+A.~Blokhuis, A.~E. Brouwer, D.~Jungnickel, V.~Kr{\v{c}}adinac, S.~Rottey, L.~Storme, T.~Sz{\H{o}}nyi, and P.~Vandendriessche.
+\newblock Blocking sets of the classical unital.
+\newblock {\em Finite Fields Appl.}, 35:1--15, 2015.
+
+\bibitem{block}
+Aart Blokhuis and Francesco Mazzocca.
+\newblock The finite field {Kakeya} problem.
+\newblock In {\em Building bridges. Between mathematics and computer science. Selected papers of the conferences held in Budapest, Hungary, August 5--9, 2008 and Keszthely, Hungary, August 11--15, 2008 and other research papers dedicated to L\'aszl\'o Lov\'asz on the occasion of his 60th birthday}, pages 205--218. Berlin: Springer; Budapest: J{\'a}nos Bolyai Mathematical Society, 2008.
+
+\bibitem{bloom2024sumproduct}
+Thomas~F. Bloom.
+\newblock A history of the sum-product problem.
+\newblock \url{http://thomasbloom.org/notes/sumproduct.html}, 2024.
+\newblock Online survey notes.
+
+\bibitem{bloom}
+Thomas~F. Bloom.
+\newblock Control and its applications in additive combinatorics, 2025.
+\newblock arXiv:2501.09470.
+
+\bibitem{brs}
+B.~D. Bojanov, Q.~I. Rahman, and J.~Szynal.
+\newblock On a conjecture of {S}endov about the critical points of a polynomial.
+\newblock {\em Mathematische Zeitschrift}, 190(2):281--285, 1985.
+
+\bibitem{bollobas1975relations}
+B{\'e}la Bollob{\'a}s.
+\newblock Relations between sets of complete subgraphs.
+\newblock In C.~St.J.~A. Nash-Williams and J.~Sheehan, editors, {\em {Proceedings of the Fifth British Combinatorial Conference}}, number~XV in Congressus Numerantium, pages 79--84, Winnipeg, 1976. Utilitas Mathematica Publishing.
+
+\bibitem{bondarenkoradchenkoviazovska}
+Andriy Bondarenko, Danylo Radchenko, and Maryna Viazovska.
+\newblock Optimal asymptotic bounds for spherical designs.
+\newblock {\em Annals of Mathematics}, 178(2):443--452, 2013.
+
+\bibitem{borcea1996}
+Iulius Borcea.
+\newblock The {Sendov} conjecture for polynomials with at most seven distinct zeros.
+\newblock {\em Analysis}, 16:137--159, 1996.
+
+\bibitem{borwein-mossinghoff}
+P.~Borwein and M.~J. Mossinghoff.
+\newblock Barker sequences and flat polynomials.
+\newblock In {\em Number theory and polynomials}, volume 352 of {\em London Mathematical Society Lecture Note Series}, pages 71--88. Cambridge University Press, Cambridge, 2008.
+
+\bibitem{bourgain1985applications}
+J.~Bourgain.
+\newblock Applications of the spaces of homogeneous polynomials to some problems on the ball algebra.
+\newblock {\em Proceedings of the American Mathematical Society}, 93(2):277--283, feb 1985.
+
+\bibitem{bourgain2016uniformly}
+Jean Bourgain.
+\newblock On uniformly bounded bases in spaces of holomorphic functions.
+\newblock {\em American Journal of Mathematics}, 138(2):571--584, 2016.
+
+\bibitem{boyer-li}
+Christopher Boyer and Zane~Kun Li.
+\newblock An improved example for an autoconvolution inequality, 2025.
+\newblock arXiv:2506.16750.
+
+\bibitem{bozoki2014}
+Sándor Bozóki, Tsung-Lin Lee, and Lajos Rónyai.
+\newblock Seven mutually touching infinite cylinders.
+\newblock {\em Computational Geometry}, 48(2):87--93, 2014.
+
+\bibitem{brass2005}
+Peter Brass, William O.~J. Moser, and János Pach.
+\newblock {\em {Research Problems in Discrete Geometry}}.
+\newblock Springer, New York, 2005.
+\newblock Corrected 2nd printing 2006.
+
+\bibitem{brass2005research}
+Peter Brass, William~OJ Moser, and J{\'a}nos Pach.
+\newblock {\em Research problems in discrete geometry}.
+\newblock Springer, 2005.
+
+\bibitem{brown1991}
+J.~E. Brown.
+\newblock On the {Sendov} {Conjecture} for sixth degree polynomials.
+\newblock {\em Proceedings of the American Mathematical Society}, 113:939--946, 1991.
+
+\bibitem{brown1997}
+J.~E. Brown.
+\newblock A proof of the {Sendov} {Conjecture} for polynomials of degree seven.
+\newblock {\em Complex Variables Theory and Application}, 33:75--95, 1997.
+
+\bibitem{brown-xiang}
+J.~E. Brown and G.~Xiang.
+\newblock Proof of the {S}endov conjecture for polynomials of degree at most eight.
+\newblock {\em Journal of Mathematical Analysis and Applications}, 232:272--292, 1999.
+
+\bibitem{bukh-chao}
+Boris Bukh and Ting-Wei Chao.
+\newblock Sharp density bounds on the finite field {Kakeya} problem.
+\newblock {\em Discrete Anal.}, 2021:9, 2021.
+\newblock Id/No 26.
+
+\bibitem{elastica}
+A.~Burchard and L.~E. Thomas.
+\newblock On the {C}auchy problem for a dynamical {E}uler's elastica.
+\newblock {\em Communications in Partial Differential Equations}, 28:271--300, 2003.
+
+\bibitem{burchardovals}
+A.~Burchard and L.~E. Thomas.
+\newblock On an isoperimetric inequality for a {S}chr{\"o}dinger operator depending on the curvature of a loop.
+\newblock {\em The Journal of Geometric Analysis}, 15(4), 2005.
+
+\bibitem{CaSt05}
+Connie~M. Campbell and William Staton.
+\newblock {A Square-Packing Problem} of {E}rdős.
+\newblock {\em The American Mathematical Monthly}, 112(2):165--167, 2005.
+
+\bibitem{cantrell_2007_heilbronn_convex}
+David Cantrell.
+\newblock Optimal configurations for the {H}eilbronn problem in convex regions, June 2007.
+
+\bibitem{cantrell_2009_3d}
+David Cantrell.
+\newblock {Point configurations in 3D space minimizing maximum to minimum distance ratio}, March 2009.
+
+\bibitem{cantrell_2009_2d}
+David Cantrell.
+\newblock Point configurations minimizing maximum to minimum distance ratio, February 2009.
+
+\bibitem{charton2024patternboost}
+François Charton, Jordan~S. Ellenberg, Adam~Zsolt Wagner, and Geordie Williamson.
+\newblock {PatternBoost: Constructions in Mathematics with a Little Help from {AI}}.
+\newblock {\em arXiv preprint arXiv:2411.00566}, 2024.
+
+\bibitem{chebyshev}
+P.~L. Chebyshev.
+\newblock M{\'e}moire sur les nombres premiers.
+\newblock {\em Journal de Math{\'e}matiques Pures et Appliqu{\'e}es}, 17:366--490, 1852.
+\newblock Also in M{\'e}moires pr{\'e}sent{\'e}s {\`a} l'Acad{\'e}mie Imp{\'e}riale des sciences de St.-P{\'e}tersbourg par divers savants 7 (1854), 15--33. Also in Oeuvres 1 (1899), 49--70.
+
+\bibitem{cheung}
+W.~Cheung and T.~Ng.
+\newblock A companion matrix approach to the study of zeros and critical points of a polynomial.
+\newblock {\em Journal of Mathematical Analysis and Applications}, 319:690--707, 2006.
+
+\bibitem{cloninger-steinerberger}
+A.~Cloninger and S.~Steinerberger.
+\newblock On suprema of autoconvolutions with an application to {S}idon sets.
+\newblock {\em Proceedings of the American Mathematical Society}, 145(8):3191--3200, 2017.
+
+\bibitem{cohen}
+Alex Cohen, Cosmin Pohoata, and Dmitrii Zakharov.
+\newblock Lower bounds for incidences, 2024.
+\newblock arXiv:2409.07658.
+
+\bibitem{cohn-elkies}
+H.~Cohn and N.~Elkies.
+\newblock New upper bounds on sphere packings {I}.
+\newblock {\em Annals of Mathematics}, 157(2):689--714, 2003.
+
+\bibitem{cohn-goncalves}
+H.~Cohn and F.~Gon{\c c}alves.
+\newblock An optimal uncertainty principle in twelve dimensions via modular forms.
+\newblock {\em Inventiones Mathematicae}, 217(3):799--831, 2019.
+
+\bibitem{Cohn1956}
+Harvey Cohn.
+\newblock {Stability Configurations of Electrons on a Sphere}.
+\newblock {\em Mathematical Tables and Other Aids to Computation}, 10(55):117--120, 1956.
+
+\bibitem{cohn-icm}
+Henry Cohn.
+\newblock Order and disorder in energy minimization.
+\newblock {\em Proceedings of the International Congress of Mathematicians}, 4:2416--2443, 2010.
+
+\bibitem{SphericalCodes}
+Henry Cohn.
+\newblock Table of spherical codes.
+\newblock MIT DSpace, 2023.
+\newblock Dataset archiving spherical codes with up to 1024 points in up to 32 dimensions.
+
+\bibitem{cohn_kissing_table}
+Henry Cohn.
+\newblock {Table of Kissing Number Bounds}.
+\newblock MIT DSpace, 2025.
+
+\bibitem{cohn2007}
+Henry Cohn and Abhinav Kumar.
+\newblock {Universally Optimal Distribution of Points on Spheres}.
+\newblock {\em Journal of the American Mathematical Society}, 20(1):99--148, 2007.
+
+\bibitem{viazovska24}
+Henry Cohn, Abhinav Kumar, Stephen~D. Miller, Danylo Radchenko, and Maryna Viazovska.
+\newblock The sphere packing problem in dimension 24.
+\newblock {\em Annals of Mathematics}, 185(3):1017--1033, 2017.
+
+\bibitem{cohnli}
+Henry Cohn and Anqi Li.
+\newblock Improved kissing numbers in seventeen through twenty-one dimensions.
+\newblock {\em arXiv:2411.04916}, 2024.
+
+\bibitem{collins2024evaluating}
+Katherine~M. Collins, Albert~Q. Jiang, Simon Frieder, Lionel Wong, Miri Zilka, Umang Bhatt, Thomas Lukasiewicz, Yuhuai Wu, Joshua~B. Tenenbaum, William Hart, Timothy Gowers, Wenda Li, Adrian Weller, and Mateja Jamnik.
+\newblock Evaluating language models for mathematics through interactions.
+\newblock {\em Proceedings of the National Academy of Sciences}, 121(24):e2318124121, 2024.
+
+\bibitem{comanici2025gemini}
+Gheorghe Comanici, Eric Bieber, Mike Schaekermann, Ice Pasupat, Noveen Sachdeva, Inderjit Dhillon, Marcel Blistein, Ori Ram, Dan Zhang, Evan Rosen, et~al.
+\newblock {Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities}.
+\newblock {\em arXiv preprint arXiv:2507.06261}, 2025.
+
+\bibitem{Conlon2010}
+David Conlon, Jacob Fox, and Benny Sudakov.
+\newblock An approximate version of {S}idorenko's conjecture.
+\newblock {\em Geometric and Functional Analysis}, 20:1354--1366, 2010.
+
+\bibitem{ConlonUnpublished2018}
+David Conlon, Jeong~Han Kim, Choongbum Lee, and Joonkyung Lee.
+\newblock Sidorenko's conjecture for higher tree decompositions, 2018.
+\newblock Unpublished note.
+
+\bibitem{Conlon2018}
+David Conlon, Jeong~Han Kim, Choongbum Lee, and Joonkyung Lee.
+\newblock Some advances on {S}idorenko's conjecture.
+\newblock {\em Journal of the London Mathematical Society}, 98(2):593--608, 2018.
+
+\bibitem{ConlonLee2021}
+David Conlon and Joonkyung Lee.
+\newblock Sidorenko's conjecture for blow-ups.
+\newblock {\em Discrete Analysis}, 2021(2):13, 2021.
+
+\bibitem{conte2007}
+A.~Conte, E.~Fujikawa, and N.~Lakic.
+\newblock Smale's mean value conjecture and the coefficients of univalent functions.
+\newblock {\em Proceedings of the American Mathematical Society}, 135(12):3819--3833, 2007.
+
+\bibitem{coolsaet2023house}
+Kris Coolsaet, Sven D’hondt, and Jan Goedgebeur.
+\newblock {House of Graphs 2.0: A database of interesting graphs and more}.
+\newblock {\em Discrete Applied Mathematics}, 325:97--107, 2023.
+
+\bibitem{cordoba}
+Antonio Cordoba.
+\newblock The {Kakeya} maximal function and the spherical summation multipliers.
+\newblock {\em Am. J. Math.}, 99:1--22, 1977.
+
+\bibitem{cosares1994optimization}
+Steve Cosares and Iraj Saniee.
+\newblock An optimization problem related to balancing loads on {SONET} rings.
+\newblock {\em Telecommunication Systems}, 3(2):165--181, 1994.
+
+\bibitem{crane}
+E.~Crane.
+\newblock A bound for {S}male's mean value conjecture for complex polynomials.
+\newblock {\em Bulletin of the London Mathematical Society}, 39:781--791, 2007.
+
+\bibitem{croft1991unsolved}
+Hallard~T. Croft, Kenneth~J. Falconer, and Richard~K. Guy.
+\newblock {\em {Unsolved Problems in Geometry}}, volume~2.
+\newblock Springer, New York, 1991.
+
+\bibitem{crouzeix2004}
+Michel Crouzeix.
+\newblock {Bounds for Analytical Functions of Matrices}.
+\newblock {\em Integral Equations and Operator Theory}, 48(4):461--477, 2004.
+
+\bibitem{crouzeix2017}
+Michel Crouzeix and César Palencia.
+\newblock {The Numerical Range} is a $(1+\sqrt{2})$-{Spectral Set}.
+\newblock {\em SIAM Journal on Matrix Analysis and Applications}, 38:649--655, 2017.
+
+\bibitem{cruzan1962}
+Orval~R. Cruzan.
+\newblock Translational addition theorems for spherical vector wave functions.
+\newblock {\em Quarterly of Applied Mathematics}, 20(1):33--40, 1962.
+
+\bibitem{currier}
+Gabriel Currier.
+\newblock Sharp {S}zemer\'{e}di-{T}rotter constructions from arbitrary number fields, 2023.
+\newblock arXiv:2304.04900.
+
+\bibitem{Danzer1986}
+L.~Danzer.
+\newblock {Finite Point-Sets} on {$S^2$} with {Minimum Distance as Large as Possible}.
+\newblock {\em Discrete Mathematics}, 60:3--66, 1986.
+
+\bibitem{davies2021advancing}
+Alex Davies, Petar Veličković, Lars Buesing, Sam Blackwell, Daniel Zheng, Nenad Tomašev, Richard Tanburn, Peter Battaglia, Charles Blundell, András Juhász, Marc Lackenby, Geordie Williamson, Demis Hassabis, and Pushmeet Kohli.
+\newblock {Advancing mathematics by guiding human intuition with AI}.
+\newblock {\em Nature}, 600(7887):70--74, 2021.
+
+\bibitem{davis2024alphaevolve}
+Damek Davis.
+\newblock {AlphaEvolve}.
+\newblock \url{https://x.com/damekdavis/status/1923031798163857814}, May 2025.
+\newblock Twitter/X thread.
+
+\bibitem{debs}
+M.~G. de~Bruin and A.~Sharma.
+\newblock On a {S}choenberg-type conjecture.
+\newblock {\em Journal of Computational and Applied Mathematics}, 105:221--228, 1999.
+\newblock Continued Fractions and Geometric Function Theory (CONFUN), Trondheim, 1997.
+
+\bibitem{pont-madrid}
+J.~de~Dios~Pont and J.~Madrid.
+\newblock On classical inequalities for autocorrelations and autoconvolutions, 2021.
+\newblock arXiv:2106.13873.
+
+\bibitem{delsarte-goethals-seidel}
+P.~Delsarte, J.~M. Goethals, and J.~J. Seidel.
+\newblock Spherical codes and designs.
+\newblock {\em Geometriae Dedicata}, 6(3):363--388, 1977.
+
+\bibitem{delsarte}
+Philippe Delsarte.
+\newblock Bounds for unrestricted codes, by linear programming.
+\newblock {\em Philips Research Reports}, 27:272--289, 1972.
+
+\bibitem{demaine2010circle}
+Erik~D. Demaine, S{\'a}ndor~P. Fekete, and Robert~J. Lang.
+\newblock Circle packing for origami design is hard.
+\newblock In {\em Origami5: Proceedings of the 5th International Conference on Origami in Science, Mathematics and Education (OSME 2010)}, pages 609--626, Singapore, 2010. A K Peters.
+\newblock July 13--17, 2010.
+
+\bibitem{github_comment_3156455197}
+Arnaud Deza.
+\newblock {Comment on: Seems a new circle packing result (2.635977) when reproducing your example}.
+\newblock GitHub Comment, 2025.
+\newblock Comment \#3156455197 on Issue \#156, OpenEvolve repository by codelion.
+
+\bibitem{diamond}
+H.~Diamond.
+\newblock Elementary methods in the study of the distribution of prime numbers.
+\newblock {\em Bulletin of the American Mathematical Society}, 7(3):553--589, 1982.
+
+\bibitem{douglas2022numerical}
+Michael~R. Douglas, Subramanian Lakshminarasimhan, and Yidi Qi.
+\newblock {Numerical Calabi-Yau metrics from holomorphic networks}.
+\newblock In Joan Bruna, Jan Hesthaven, and Lenka Zdeborova, editors, {\em Proceedings of the 2nd Mathematical and Scientific Machine Learning Conference}, volume 145 of {\em Proceedings of Machine Learning Research}, pages 223--252. PMLR, 2022.
+
+\bibitem{dress_yang_zeng_1995}
+Andreas W.~M. Dress, Lu~Yang, and Zhenbing Zeng.
+\newblock Heilbronn problem for six points in a planar convex body.
+\newblock In Ding-Zhu Du and Panos~M. Pardalos, editors, {\em Minimax and Applications}, volume~4 of {\em Nonconvex Optimization and Its Applications}, pages 173--190, Boston, MA, 1995. Springer.
+
+\bibitem{ducci2012commentary}
+J.~Ducci.
+\newblock Commentary on ``{T}owards a noncommutative arithmetic-geometric mean inequality'' by {B}. {R}echt and {C}. {R}{\'e}.
+\newblock In {\em Proceedings of the 25th Annual Conference on Learning Theory}, volume~23 of {\em JMLR Workshop and Conference Proceedings}. JMLR.org, 2012.
+
+\bibitem{ellenberg2025generative}
+Jordan~S. Ellenberg, Cristofero~S. Fraser-Taliente, Thomas~R. Harvey, Karan Srivastava, and Andrew~V. Sutherland.
+\newblock {Generative Modeling for Mathematical Discovery}, 2025.
+\newblock arXiv:2503.11061.
+
+\bibitem{ellenberg2019convergence}
+Jordan~S Ellenberg and Lalit Jain.
+\newblock Convergence rates for ordinal embedding.
+\newblock {\em arXiv:1904.12994}, 2019.
+
+\bibitem{erber1991equilibrium}
+T.~Erber and G.~M. Hockney.
+\newblock Equilibrium configurations of {N} equal charges on a sphere.
+\newblock {\em Journal of Physics A: Mathematical and General}, 24(23):L1369, 1991.
+
+\bibitem{erdos-overlap}
+P.~Erd\H{o}s.
+\newblock Problems and results in additive number theory.
+\newblock In {\em Colloque sur la {T}h\'eorie des {N}ombres, {B}ruxelles, 1955}, pages 127--137. Georges Thone, Li\`ege, 1956.
+
+\bibitem{erdos-disc}
+Paul Erd\H{o}s.
+\newblock Some unsolved problems.
+\newblock {\em Michigan Math. J.}, 4:299--300, 1957.
+\newblock Problems 2, 4, 23.
+
+\bibitem{erdos1992}
+Paul Erd\H{o}s.
+\newblock Some of my favourite problems in various branches of combinatorics.
+\newblock {\em Le Matematiche (Catania)}, 47:231--240, 1992.
+
+\bibitem{erdos-flat}
+P.~Erd{\H{o}}s.
+\newblock An inequality for the maximum of trigonometric polynomials.
+\newblock {\em Annales Polonici Mathematici}, 12:151--154, 1962.
+
+\bibitem{erdos1992unsolved}
+P{\'a}l Erd{\H{o}}s.
+\newblock {Some Unsolved problems in Geometry, Number Theory and Combinatorics}.
+\newblock {\em Eureka}, 52:44--48, 1992.
+
+\bibitem{erdos1961unsolved}
+Paul Erd{\H{o}}s.
+\newblock Some unsolved problems.
+\newblock {\em Magyar Tud. Akad. Mat. Kutat{\'o} Int. K{\"o}zl.}, 6:221--254, 1961.
+
+\bibitem{erdos1990favourite}
+Paul Erd{\H{o}}s.
+\newblock Some of my favourite unsolved problems.
+\newblock In {\em A tribute to Paul Erd{\H{o}}s}, pages 467--478. Cambridge University Press, Cambridge, 1990.
+
+\bibitem{erdos1995favourite}
+Paul Erd{\H{o}}s.
+\newblock Some of my favourite problems in number theory, combinatorics, and geometry.
+\newblock {\em Resenhas do Instituto de Matem{\'a}tica e Estat{\'i}stica da Universidade de S{\~a}o Paulo}, 2(2):165--186, 1995.
+
+\bibitem{erdos1997favourite}
+Paul Erd{\H{o}}s.
+\newblock Some of my favourite unsolved problems.
+\newblock {\em Mathematica Japonica}, 46(1):527--537, 1997.
+
+\bibitem{erdos1975packing}
+Paul Erd{\H{o}}s and Ronald~L Graham.
+\newblock On packing squares with equal squares.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 19(1):119--123, 1975.
+
+\bibitem{erdos1935}
+Paul Erd{\H{o}}s and George Szekeres.
+\newblock A combinatorial problem in geometry.
+\newblock {\em Compositio Mathematica}, 2:463--470, 1935.
+
+\bibitem{erdos1960}
+Paul Erd{\H{o}}s and George Szekeres.
+\newblock On some extremum problems in elementary geometry.
+\newblock {\em Annales Universitatis Scientiarium Budapestinensis de Rolando E{\"o}tv{\"o}s Nominatae, Sectio Mathematica}, 3--4:53--63, 1960.
+
+\bibitem{sum-product}
+Paul Erd{\H{o}}s and E.~Szemer{\'e}di.
+\newblock On sums and products of integers.
+\newblock Studies in {Pure} {Mathematics}, {Mem}. of {P}. {Tur{\'a}n}, 213-218 (1983)., 1983.
+
+\bibitem{Er94b}
+Paul Erdős.
+\newblock Some problems in number theory, combinatorics and combinatorial geometry.
+\newblock {\em Mathematica Pannonica}, 5(2):261--269, 1994.
+
+\bibitem{ErSo95}
+Paul Erdős and Alexander Soifer.
+\newblock {A Square-Packing Problem} of {E}rdős.
+\newblock {\em Geombinatorics}, 4(4):110--114, 1995.
+
+\bibitem{erdosproblems}
+{Erdős Problems Community}.
+\newblock {Erd{\H{o}}s Problems}.
+\newblock Website.
+\newblock Accessed \today.
+
+\bibitem{fajtlowicz1988conjectures}
+Siemion Fajtlowicz.
+\newblock On conjectures of {G}raffiti.
+\newblock In {\em Annals of discrete mathematics}, volume~38, pages 113--118. Elsevier, 1988.
+
+\bibitem{fawzi2022discovering}
+Alhussein Fawzi, Matej Balog, Aja Huang, Thomas Hubert, Bernardino Romera-Paredes, Mohammadamin Barekatain, Alexander Novikov, Francisco~J R.~Ruiz, Julian Schrittwieser, Grzegorz Swirszcz, et~al.
+\newblock Discovering faster matrix multiplication algorithms with reinforcement learning.
+\newblock {\em Nature}, 610(7930):47--53, 2022.
+
+\bibitem{fejes1964regular}
+L{\'a}szl{\'o} Fejes-T{\'o}th.
+\newblock {\em {Regular Figures}}.
+\newblock The Macmillan Company, New York, 1964.
+
+\bibitem{fishburn1992unit}
+P.~C. Fishburn and J.~A. Reeds.
+\newblock Unit distances between vertices of a convex polygon.
+\newblock {\em Computational Geometry}, 2(2):81--91, 1992.
+
+\bibitem{fisher1989lower}
+D.~Fisher.
+\newblock Lower bounds on the number of triangles in a graph.
+\newblock {\em Journal of Graph Theory}, 13(4):505--512, 1989.
+
+\bibitem{folland1999real}
+Gerald~B. Folland.
+\newblock {\em {Real Analysis: Modern Techniques and Their Applications}}.
+\newblock Pure and Applied Mathematics. John Wiley \& Sons, Inc., New York, 2nd edition, 1999.
+\newblock A Wiley-Interscience Publication.
+
+\bibitem{freiman}
+G.~A. Freiman and V.~P. Pigarev.
+\newblock The relation between the invariants {R} and {T} (russian).
+\newblock {\em Kalinin. Gos. Univ.}, pages 172--174, 1973.
+
+\bibitem{friedman2005packing}
+Erich Friedman.
+\newblock {Packing Unit Squares in Squares: A Survey and New Results}.
+\newblock {\em The Electronic Journal of Combinatorics}, 12(1):DS7, 2005.
+\newblock Dynamic Survey.
+
+\bibitem{friedman_heilbronn_convex}
+Erich Friedman.
+\newblock {The Heilbronn Problem for Convex Regions}.
+\newblock \url{https://erich-friedman.github.io/packing/heilconvex/}, 2007.
+\newblock Webpage documenting optimal point configurations for the Heilbronn problem in general convex regions.
+
+\bibitem{friedman_circles2}
+Erich Friedman.
+\newblock Circles in {R}ectangles.
+\newblock \url{https://erich-friedman.github.io/packing/cirRrec/}, 2011.
+\newblock Webpage documenting n circles with the largest possible sum of radii packed inside a rectangle of perimeter 4.
+
+\bibitem{friedman_circles1}
+Erich Friedman.
+\newblock Circles in {S}quares.
+\newblock \url{https://erich-friedman.github.io/packing/cirRsqu/}, 2012.
+\newblock Webpage documenting n circles with the largest possible sum of radii packed inside a unit square.
+
+\bibitem{friedman_heilbronn_triangle}
+Erich Friedman.
+\newblock {The Heilbronn Problem for Triangles}.
+\newblock \url{https://erich-friedman.github.io/packing/heiltri/}, 2015.
+\newblock Webpage documenting optimal point configurations for the Heilbronn problem in triangles of unit area.
+
+\bibitem{friedman_main_website}
+Erich Friedman.
+\newblock {Erich's Packing Center}.
+\newblock \url{https://erich-friedman.github.io/packing/}, 2019.
+\newblock Webpage documenting optimal configurations for various packing problems.
+
+\bibitem{friedman_maxmin_2d}
+Erich Friedman.
+\newblock {Minimizing the Ratio of Maximum to Minimum Distance}.
+\newblock \url{https://erich-friedman.github.io/packing/maxmin/}, 2024.
+\newblock Webpage documenting optimal point configurations in 2D.
+
+\bibitem{friedman_maxmin_3d}
+Erich Friedman.
+\newblock {Minimizing the Ratio of Maximum to Minimum Distance in 3 Dimensions}.
+\newblock \url{https://erich-friedman.github.io/packing/maxmin3/}, 2024.
+\newblock Webpage documenting optimal point configurations in 3D.
+
+\bibitem{friedman_cubes_in_cubes}
+Erich Friedman.
+\newblock {Cubes in Cubes}.
+\newblock \url{https://erich-friedman.github.io/packing/cubincub/}, [YEAR].
+\newblock Accessed: [DATE].
+
+\bibitem{fujikawa2006}
+E.~Fujikawa and T.~Sugawa.
+\newblock Geometric function theory and smale's mean value conjecture.
+\newblock {\em Proceedings of the Japan Academy, Series A Mathematical Sciences}, 82(7):97--100, 2006.
+
+\bibitem{furstenberg}
+Harry Furstenberg.
+\newblock Ergodic behavior of diagonal measures and a theorem of {S}zemer\'edi on arithmetic progressions.
+\newblock {\em J. Analyse Math.}, 31:204--256, 1977.
+
+\bibitem{ganzhinov}
+Mikhail Ganzhinov.
+\newblock Highly symmetric lines.
+\newblock {\em Linear Algebra and its Applications}, 2025.
+
+\bibitem{gerbicz2025sums}
+Robert Gerbicz.
+\newblock Sums and differences of sets (improvement over {AlphaEvolve}), 2025.
+\newblock arXiv:2505.16105.
+
+\bibitem{gerver}
+Joseph~L. Gerver.
+\newblock On moving a sofa around a corner.
+\newblock {\em Geometriae Dedicata}, 42(3):267--283, 1992.
+
+\bibitem{ghosal2025subsets}
+Anubhab Ghosal, Ritesh Goenka, and Peter Keevash.
+\newblock On subsets of lattice cubes avoiding affine and spherical degeneracies.
+\newblock {\em arXiv preprint arXiv:2509.06935}, 2025.
+
+\bibitem{glasser1992energies}
+L.~Glasser and A.~G. Every.
+\newblock Energies and spacings of point charges on a sphere.
+\newblock {\em Journal of Physics A: Mathematical and General}, 25(9):2473--2482, 1992.
+
+\bibitem{goedgebeur2025improved}
+Jan Goedgebeur, Jorik Jooken, Gwena{\"e}l Joret, and Tibo Van~den Eede.
+\newblock Improved lower bounds on the maximum size of graphs with girth 5.
+\newblock {\em arXiv preprint arXiv:2508.05562}, 2025.
+
+\bibitem{golay}
+Marcel J.~E. Golay.
+\newblock Notes on the representation of $\{1,\,2,\,\ldots ,\,n\}$ by differences.
+\newblock {\em J. London Math. Soc. (2)}, 4:729--734, 1972.
+
+\bibitem{Golay1977}
+Marcel J.~E. Golay.
+\newblock Sieves for low autocorrelation binary sequences.
+\newblock {\em IEEE Transactions on Information Theory}, 23(1):43--51, 1977.
+
+\bibitem{goncalves-etal}
+F.~Gon{\c c}alves, D.~Oliveira e~Silva, and S.~Steinerberger.
+\newblock Hermite polynomials, linear flows on the torus, and an uncertainty principle for roots.
+\newblock {\em Journal of Mathematical Analysis and Applications}, 451(2):678--711, 2017.
+
+\bibitem{GoncalvesSilvaRamos2023}
+Felipe Gon{\c c}alves, Diogo Oliveira~e Silva, and Jo{\~ a}o~Pedro Ramos.
+\newblock New sign uncertainty principles.
+\newblock {\em Discrete Analysis}, jul 21 2023.
+
+\bibitem{goodman1959sets}
+A.~W. Goodman.
+\newblock On sets of acquaintances and strangers at any party.
+\newblock {\em American Mathematical Monthly}, 66(9):778--783, 1959.
+
+\bibitem{deepmind2024alphaproof}
+{Google DeepMind}.
+\newblock {AI achieves silver-medal standard solving International Mathematical Olympiad problems}.
+\newblock Google DeepMind Blog, July 2024.
+
+\bibitem{deepmind2025dt}
+{Google DeepMind}.
+\newblock {Advanced version of Gemini with Deep Think officially achieves gold-medal standard at the International Mathematical Olympiad}.
+\newblock Google DeepMind Blog, July 2025.
+
+\bibitem{green-open}
+B.~Green.
+\newblock Open problems.
+\newblock \url{https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf}.
+
+\bibitem{green}
+B.~Green and I.~Ruzsa.
+\newblock On the arithmetic {K}akeya conjecture of {K}atz and {T}ao.
+\newblock {\em Periodica Mathematica Hungarica}, 78(2):135--151, 2019.
+
+\bibitem{green-sawhney}
+Ben Green and Mehtaab Sawhney.
+\newblock Improved bounds for the {F}urstenberg-{S}{\'a}rk{\"o}zy theorem, 2024.
+\newblock arXiv:2411.17448.
+
+\bibitem{greenbaum2017}
+Anne Greenbaum, Adrian~S. Lewis, and Michael~L. Overton.
+\newblock Variational analysis of the {C}rouzeix ratio.
+\newblock {\em Mathematical Programming}, 164:229--243, 2017.
+
+\bibitem{greenbaum2014investigation}
+Anne Greenbaum, Adrian~S Lewis, Michael~L Overton, and Lloyd~N Trefethen.
+\newblock Investigation of {Crouzeix’s Conjecture via Optimization}.
+\newblock In {\em Householder Symposium XIX June 8-13, Spa Belgium}, page 171, 2014.
+
+\bibitem{greenbaum2018}
+Anne Greenbaum and Michael~L. Overton.
+\newblock Numerical investigation of {C}rouzeix's conjecture.
+\newblock {\em Linear Algebra and its Applications}, 542:225--245, 2018.
+
+\bibitem{guo}
+Alan Guo, Swastik Kopparty, and Madhu Sudan.
+\newblock New affine-invariant codes from lifting.
+\newblock In {\em Proceedings of the 4th conference on innovations in theoretical computer science, ITCS'13, Berkeley, CA, USA, January 9--12, 2013}, pages 529--539. New York, NY: Association for Computing Machinery (ACM), 2013.
+
+\bibitem{guth-silier}
+Larry Guth and Olivine Silier.
+\newblock Sharp {Szemer{\'e}di}-{Trotter} constructions in the plane.
+\newblock {\em Electron. J. Comb.}, 32(1):research paper p1.9, 11, 2025.
+
+\bibitem{gyarmati}
+Katalin Gyarmati, Fran{\c{c}}ois Hennecart, and Imre~Z. Ruzsa.
+\newblock Sums and differences of finite sets.
+\newblock {\em Functiones et Approximatio Commentarii Mathematici}, 37(1):175--186, 2007.
+
+\bibitem{hales}
+Thomas~C. Hales.
+\newblock A proof of the {K}epler conjecture.
+\newblock {\em Annals of Mathematics}, 162(3):1065--1185, 2005.
+
+\bibitem{Ha84}
+Sylvia Halász.
+\newblock Packing a convex domain with similar convex domains.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 37(1):85--90, 1984.
+
+\bibitem{hardin1995codes}
+R.~H. Hardin and N.~J.~A. Sloane.
+\newblock {Codes (Spherical) and Designs (Experimental)}.
+\newblock In A.~R. Calderbank, editor, {\em Different Aspects of Coding Theory}, volume~50 of {\em AMS Series Proceedings Symposia Applied Math.}, pages 179--206. American Mathematical Society, 1995.
+
+\bibitem{hart2010flint}
+William~B. Hart.
+\newblock {FLINT}: {Fast} {Library} for {Number} {Theory}: {An} {Introduction}.
+\newblock In {\em Mathematical Software -- ICMS 2010}, volume 6327 of {\em Lecture Notes in Computer Science}, pages 88--91, Berlin, Heidelberg, 2010. Springer.
+
+\bibitem{Hatami2010}
+H.~Hatami.
+\newblock {Graph norms and Sidorenko's conjecture}.
+\newblock {\em Israel Journal of Mathematics}, 175:125--150, 2010.
+
+\bibitem{haugland}
+J.~K. Haugland.
+\newblock The minimum overlap problem revisited, 2016.
+\newblock arXiv:1609.08000.
+
+\bibitem{he2022murmurations}
+Yang-Hui He, Kyu-Hwan Lee, Thomas Oliver, and Alexey Pozdnyakov.
+\newblock Murmurations of elliptic curves.
+\newblock {\em Experimental Mathematics}, 34(3):528--540, 2025.
+
+\bibitem{hennecart}
+F.~Hennecart, G.~Robert, and A.~Yudin.
+\newblock On the number of sums and differences.
+\newblock In {\em Structure theory of set addition}, number 258 in Ast{\'e}risque, pages 173--178. 1999.
+
+\bibitem{holmsen2020}
+Andreas~F. Holmsen, Hossein~Nassajian Mojarrad, J{\'a}nos Pach, and G{\'a}bor Tardos.
+\newblock Two extensions of the {Erd\H{o}s--Szekeres} problem.
+\newblock {\em Journal of the European Mathematical Society}, 22(12):3981--3995, 2020.
+
+\bibitem{horvath2016maximum}
+{\'A}kos~G Horv{\'a}th and Zsolt L{\'a}ngi.
+\newblock Maximum volume polytopes inscribed in the unit sphere.
+\newblock {\em Monatshefte f{\"u}r Mathematik}, 181(2):341--354, 2016.
+
+\bibitem{IKW-noncommutative}
+A.~Israel, F.~Krahmer, and R.~Ward.
+\newblock An arithmetic-geometric mean inequality for products of three matrices.
+\newblock {\em Linear Algebra and its Applications}, 488:1--12, 2016.
+
+\bibitem{jedwab}
+Jonathan Jedwab, Daniel~J. Katz, and Kai-Uwe Schmidt.
+\newblock Littlewood polynomials with small {{\(L^4\)}} norm.
+\newblock {\em Adv. Math.}, 241:127--136, 2013.
+
+\bibitem{johansson2017arb}
+Fredrik Johansson.
+\newblock {Arb}: {Efficient} {Arbitrary}-{Precision} {Midpoint}-{Radius} {Interval} {Arithmetic}.
+\newblock {\em IEEE Transactions on Computers}, 66(8):1281--1292, August 2017.
+
+\bibitem{kalbfleisch1970}
+J.~Kalbfleisch, J.~Kalbfleisch, and R.~Stanton.
+\newblock A combinatorial problem on convex regions.
+\newblock In {\em Proceedings of the Louisiana Conference on Combinatorics, Graph Theory and Computing}, volume~1 of {\em Congressus Numerantium}, pages 180--188, Baton Rouge, Louisiana, 1970. Louisiana State University.
+
+\bibitem{katz-tao-new}
+N.~Katz and T.~Tao.
+\newblock New bounds for {K}akeya problems.
+\newblock {\em Journal d'Analyse Math{\'e}matique}, 87:231--263, 2002.
+
+\bibitem{katz-tao}
+N.~H. Katz and T.~Tao.
+\newblock Bounds on arithmetic projections and applications to the {K}akeya conjecture.
+\newblock {\em Mathematical Research Letters}, 6:625--630, 1999.
+
+\bibitem{katznelson1968}
+Yitzhak Katznelson.
+\newblock {\em {An Introduction to Harmonic Analysis}}.
+\newblock John Wiley \& Sons, New York, 1968.
+\newblock Awarded the American Mathematical Society Steele Prize for Mathematical Exposition.
+
+\bibitem{kearney2002efficient}
+Michael~J Kearney and Peter Shiu.
+\newblock Efficient packing of unit squares in a square.
+\newblock {\em the electronic journal of combinatorics}, pages R14--R14, 2002.
+
+\bibitem{keevash2011hypergraph}
+Peter Keevash.
+\newblock Hypergraph {T}ur\'an problems.
+\newblock {\em Surveys in combinatorics}, 392:83--140, 2011.
+
+\bibitem{keich}
+U.~Keich.
+\newblock On {$L^p$} bounds for {K}akeya maximal functions and the {M}inkowski dimension in {$\mathbb{R}^2$}.
+\newblock {\em Bulletin of the London Mathematical Society}, 31(2):213--221, 1999.
+
+\bibitem{khadzhiivanov1978nordhaus}
+N.~Khadzhiivanov and V.~Nikiforov.
+\newblock The {Nordhaus-Stewart-Moon-Moser} inequality.
+\newblock {\em Serdica}, 4:344--350, 1978.
+\newblock In Russian.
+
+\bibitem{khanna1997polynomial}
+Sanjeev Khanna.
+\newblock A polynomial time approximation scheme for the sonet ring loading problem.
+\newblock {\em Bell Labs Technical Journal}, 2(2):36--41, 1997.
+
+\bibitem{khavinson}
+D.~Khavinson, R.~Pereira, M.~Putinar, E.~B. Saff, and S.~Shimorin.
+\newblock Borcea's variance conjectures on the critical points of polynomials.
+\newblock In P.~Br{\"a}nd{\'e}n, M.~Passare, and M.~Putinar, editors, {\em Notions of Positivity and the Geometry of Polynomials}, Trends in Mathematics. Springer, Basel, 2011.
+
+\bibitem{Kim2016}
+Jeong~Han Kim, Choongbum Lee, and Joonkyung Lee.
+\newblock Two approaches to {S}idorenko's conjecture.
+\newblock {\em Transactions of the American Mathematical Society}, 368(7):5057--5074, 2016.
+
+\bibitem{klartag}
+Boaz Klartag.
+\newblock Lattice packing of spheres in high dimensions using a stochastically evolving ellipsoid.
+\newblock 2025.
+\newblock arXiv:2504.05042.
+
+\bibitem{komlos}
+J\'anos Koml\'os, J\'anos Pintz, and Endre Szemer\'edi.
+\newblock A lower bound for {Heilbronn}'s problem.
+\newblock {\em J. Lond. Math. Soc., II. Ser.}, 25:13--24, 1982.
+
+\bibitem{konev-lisitsa}
+Boris Konev and Alexei Lisitsa.
+\newblock Computer-aided proof of {Erd{\H{o}}s} discrepancy properties.
+\newblock {\em Artif. Intell.}, 224:103--118, 2015.
+
+\bibitem{korevaarmeyers}
+J.~Korevaar and J.~L.~H. Meyers.
+\newblock Spherical {F}araday cage for the case of equal point charges and {C}hebyshev-type quadrature on the sphere.
+\newblock {\em Integral Transforms and Special Functions}, 1(2):105--117, 1993.
+
+\bibitem{kostochka}
+A.~V. Kostochka.
+\newblock A class of constructions for {T}ur{\'a}n's (3,4)-problem.
+\newblock {\em Combinatorica}, 2:187--192, 1982.
+
+\bibitem{laiwong}
+Chun-Kit Lai and Adeline~E. Wong.
+\newblock A non-sticky {K}akeya set of {L}ebesgue measure zero, 2025.
+\newblock arXiv:2506.18142.
+
+\bibitem{Lai2023}
+Xiangjing Lai, Dong Yue, Jin-Kao Hao, Fred Glover, and Zhipeng Lü.
+\newblock Iterated dynamic neighborhood search for packing equal circles on a sphere.
+\newblock {\em Computers \& Operations Research}, 151:106121, 2023.
+
+\bibitem{lange2025shinkaevolve}
+Robert~Tjarko Lange.
+\newblock {ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution}.
+\newblock {\em arXiv:2509.19349}, 2025.
+
+\bibitem{Hars2025}
+{Laszlo Hars}.
+\newblock {Numerical Solutions for the Tammes Problem, Numerical Solutions of the Thomson-P Problems}.
+\newblock \url{https://www.hars.us/}, 2025.
+
+\bibitem{leech}
+John Leech.
+\newblock On the representation of $\{1,2,\ldots,n\}$ by differences.
+\newblock {\em J. London Math. Soc.}, 31:160--169, 1956.
+
+\bibitem{delaat}
+Nando Leijenhorst and David de~Laat.
+\newblock Solving clustered low-rank semidefinite programs arising from polynomial optimization.
+\newblock {\em Mathematical Programming Computation}, 16(3):503--534, 2024.
+
+\bibitem{lemm}
+M.~Lemm.
+\newblock New counterexamples for sums-differences.
+\newblock {\em Proceedings of the American Mathematical Society}, 143(9):3863--3868, 2015.
+
+\bibitem{levenshtein}
+Vladimir~I. Levenshtein.
+\newblock On bounds for packings in {$n$}-dimensional {E}uclidean space.
+\newblock {\em Doklady Akademii Nauk SSSR}, 245(6):1299--1303, 1979.
+\newblock English translation in Soviet Mathematics Doklady 20 (1979), 417--421.
+
+\bibitem{lewko}
+Mark Lewko.
+\newblock An improved lower bound related to the {F}urstenberg-{S}{\'a}rk{\"o}zy theorem.
+\newblock {\em Electronic Journal of Combinatorics}, 22:Paper 1.32, 2015.
+
+\bibitem{Li2011}
+J.~X. Li and B.~Szegedy.
+\newblock On the logarithmic calculus and {S}idorenko's conjecture, 2011.
+\newblock arXiv:1107.1153.
+
+\bibitem{lieb2001analysis}
+Elliott~H. Lieb and Michael Loss.
+\newblock {\em Analysis}, volume~14 of {\em Graduate Studies in Mathematics}.
+\newblock American Mathematical Society, Providence, RI, 2nd edition, 2001.
+
+\bibitem{linde2006lower}
+Helmut Linde.
+\newblock A lower bound for the ground state energy of a {S}chr\"{o}dinger operator on a loop.
+\newblock {\em Proc. Amer. Math. Soc.}, 134(12):3629--3635, 2006.
+
+\bibitem{Littlewood1966}
+J.~E. Littlewood.
+\newblock On polynomials $\sum \pm z^m$, $\sum e^{\alpha_m i} z^m$, $z = e^{\theta i}$.
+\newblock {\em Journal of the London Mathematical Society}, 41:367--376, 1966.
+
+\bibitem{littlewood1968}
+J.~E. Littlewood.
+\newblock {\em Some problems in real and complex analysis}.
+\newblock Heath Mathematical Monographs. Raytheon Education, Lexington, Massachusetts, 1968.
+
+\bibitem{liu2025deepevolve}
+Gang Liu, Yihan Zhu, Jie Chen, and Meng Jiang.
+\newblock {Scientific} {Algorithm} {Discovery} by {Augmenting} {AlphaEvolve} with {Deep} {Research}, 2025.
+
+\bibitem{liu2023solution}
+Hong Liu and Richard Montgomery.
+\newblock A solution to {E}rd{\H{o}}s and {H}ajnal’s odd cycle problem.
+\newblock {\em Journal of the American Mathematical Society}, 36(4):1191--1234, 2023.
+
+\bibitem{lovasz1983number}
+L{\'a}szl{\'o} Lov{\'a}sz and Mikl{\'o}s Simonovits.
+\newblock On the number of complete subgraphs of a graph, {II}.
+\newblock In {\em Studies in Pure Mathematics}, pages 459--495. Birkh{\"a}user, 1983.
+
+\bibitem{lund}
+Ben Lund, Shubhangi Saraf, and Charles Wolf.
+\newblock Finite field {Kakeya} and {Nikodym} sets in three dimensions.
+\newblock {\em SIAM J. Discrete Math.}, 32(4):2836--2849, 2018.
+
+\bibitem{gemini_gold}
+Thang Luong and Edward Lockhart.
+\newblock {Advanced version of Gemini with Deep Think officially achieves gold-medal standard at the International Mathematical Olympiad}.
+\newblock \url{https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/}, July 2025.
+
+\bibitem{maric2019}
+Filip Mari{\'c}.
+\newblock Fast formal proof of the {Erd{\H{o}}s--Szekeres} conjecture for convex polygons with at most 6 points.
+\newblock {\em Journal of Automated Reasoning}, 62:301--329, 2019.
+
+\bibitem{mathoverflow246914}
+{MathOverflow Community}.
+\newblock Sofa in a snaky 3{D} corridor.
+\newblock MathOverflow, 2022.
+\newblock Question 246914.
+
+\bibitem{mathoverflow474916}
+{MathOverflow Community}.
+\newblock How large can $\mathbf{P}[x_1 + x_2 + x_3 < 2 x_4]$ get?
+\newblock MathOverflow, 2024.
+\newblock Question 474916.
+
+\bibitem{matolcsi-vinuesa}
+M.~Matolcsi and C.~J. Vinuesa.
+\newblock Improved bounds on the supremum of autoconvolutions.
+\newblock {\em Journal of Mathematical Analysis and Applications}, 372(2):439--447, 2010.
+
+\bibitem{meir1969}
+A.~Meir and A.~Sharma.
+\newblock On {Ilyeff's} conjecture.
+\newblock {\em Pacific Journal of Mathematics}, 31:459--467, 1969.
+
+\bibitem{melas-1}
+A.~Melas.
+\newblock On the centered {H}ardy--{L}ittlewood maximal operator.
+\newblock {\em Transactions of the American Mathematical Society}, 354:3263--3273, 2002.
+
+\bibitem{melas-2}
+A.~D. Melas.
+\newblock The best constant for the centered {H}ardy--{L}ittlewood maximal inequality.
+\newblock {\em Annals of Mathematics}, 157:647--688, 2003.
+
+\bibitem{mohammadi}
+Ali Mohammadi and Sophie Stevens.
+\newblock Attaining the exponent 5/4 for the sum-product problem in finite fields.
+\newblock {\em Int. Math. Res. Not.}, 2023(4):3516--3532, 2023.
+
+\bibitem{moon1962problem}
+J.~W. Moon and L.~Moser.
+\newblock On a problem of {Tur{\'a}n}.
+\newblock {\em Magyar. Tud. Akad. Mat. Kutat{\'o} Int. K{\"o}zl}, 7:283--286, 1962.
+
+\bibitem{moser}
+Leo Moser.
+\newblock Moving furniture through a hallway.
+\newblock {\em SIAM Review}, 8(3):381--381, 1966.
+
+\bibitem{MusinTarasov2012}
+O.~R. Musin and A.~S. Tarasov.
+\newblock The strong thirteen spheres problem.
+\newblock {\em Discrete \& Computational Geometry}, 48(1):128--141, 2012.
+
+\bibitem{musin}
+Oleg~R Musin.
+\newblock The kissing number in four dimensions.
+\newblock {\em Annals of Mathematics}, pages 1--32, 2008.
+
+\bibitem{MusinTarasov2015}
+Oleg~R. Musin and Alexey~S. Tarasov.
+\newblock {The Tammes Problem} for {$N = 14$}.
+\newblock {\em Experimental Mathematics}, 24(4):460--468, 2015.
+
+\bibitem{mutoh2003polyhedra}
+Nobuaki Mutoh.
+\newblock {The Polyhedra of Maximal Volume Inscribed in the Unit Sphere and of Minimal Volume Circumscribed about the Unit Sphere}.
+\newblock In Jin Akiyama and Mikio Kano, editors, {\em Discrete and Computational Geometry}, volume 2866 of {\em Lecture Notes in Computer Science}, pages 204--214. Springer, Berlin, Heidelberg, 2003.
+\newblock JCDCG 2002, Tokyo, Japan, December 6-9, 2002, Revised Papers.
+
+\bibitem{nagda2025reinforced}
+Ansh Nagda, Prabhakar Raghavan, and Abhradeep Thakurta.
+\newblock {Reinforced Generation of Combinatorial Structures: Applications to Complexity Theory}.
+\newblock {\em arXiv:2509.18057}, 2025.
+
+\bibitem{neumaier1990}
+Arnold Neumaier.
+\newblock {\em {Interval Methods for Systems of Equations}}, volume~37 of {\em Encyclopedia of Mathematics and its Applications}.
+\newblock Cambridge University Press, Cambridge, 1990.
+
+\bibitem{nordhaus1963triangles}
+E.~A. Nordhaus and B.~M. Stewart.
+\newblock Triangles in an ordinary graph.
+\newblock {\em Canadian J. Math.}, 15:33--41, 1963.
+
+\bibitem{novikov2025alphaevolve}
+Alexander Novikov, Ng{\^a}n Vu, Marvin Eisenberger, Emilien Dupont, Po-Sen Huang, Adam~Zsolt Wagner, Sergey Shirobokov, Borislav Kozlovskii, Francisco J.~R. Ruiz, Abbas Mehrabian, M.~Pawan Kumar, Abigail See, Swarat Chaudhuri, George Holland, Alex Davies, Sebastian Nowozin, Pushmeet Kohli, and Matej Balog.
+\newblock {AlphaEvolve: A coding agent for scientific and algorithmic discovery}.
+\newblock Technical report, Google DeepMind, May 2025.
+
+\bibitem{odlyzko}
+Andrew Odlyzko.
+\newblock Search for ultraflat polynomials with plus and minus one coefficients.
+\newblock In {\em Connections in discrete mathematics}. 2018.
+
+\bibitem{odlyzkosloane}
+Andrew~M. Odlyzko and Neil J.~A. Sloane.
+\newblock New bounds on the number of unit spheres that can touch a unit sphere in {$n$} dimensions.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 26(2):210--214, 1979.
+
+\bibitem{packebusch}
+Tom Packebusch and Stephan Mertens.
+\newblock Low autocorrelation binary sequences.
+\newblock {\em J. Phys. A, Math. Theor.}, 49(16):18, 2016.
+\newblock Id/No 165001.
+
+\bibitem{pearcy1966}
+C.~Pearcy.
+\newblock An elementary proof of the power inequality for the numerical radius.
+\newblock {\em Michigan Mathematical Journal}, 13:289--291, 1966.
+
+\bibitem{phelps}
+D.~Phelps and R.~S. Rodriguez.
+\newblock Some properties of extremal polynomials for the {I}lieff conjecture.
+\newblock {\em Kodai Mathematical Seminar Reports}, 24:172--175, 1972.
+
+\bibitem{pikhitsa2009}
+P.~V. Pikhitsa, M.~Choi, H.-J. Kim, and S.-H. Ahn.
+\newblock Auxetic lattice of multipods.
+\newblock {\em Physica Status Solidi B}, 246(9):2098--2101, 2009.
+
+\bibitem{pikhitsa2004}
+Peter~V. Pikhitsa.
+\newblock {Regular Network of Contacting Cylinders with Implications for Materials with Negative {Poisson} Ratios}.
+\newblock {\em Physical Review Letters}, 93(1):015505, 2004.
+
+\bibitem{Pr08}
+Iwan Praton.
+\newblock The {E}rdos and {C}ampbell-{S}taton conjectures about square packing, 2005.
+\newblock arXiv:0504341.
+
+\bibitem{radchenko2019fourier}
+Danylo Radchenko and Maryna Viazovska.
+\newblock Fourier interpolation on the real line.
+\newblock {\em Publications math{\'e}matiques de l'IH{\'E}S}, 129(1):51--81, 2019.
+
+\bibitem{rakhmanov1994minimal}
+E.~A. Rakhmanov, E.~B. Saff, and Y.~M. Zhou.
+\newblock Minimal discrete energy on the sphere.
+\newblock {\em Mathematical Research Letters}, 1(5):647--662, 1994.
+
+\bibitem{ransford2018}
+Thomas Ransford and Felix Schwenninger.
+\newblock Remarks on the {C}rouzeix-{P}alencia proof that the numerical range is a $(1+\sqrt{2})$-spectral set.
+\newblock {\em SIAM Journal on Matrix Analysis and Applications}, 39(1):342--345, 2018.
+
+\bibitem{razborov}
+A.~Razborov.
+\newblock On 3-hypergraphs with forbidden 4-vertex configurations.
+\newblock {\em SIAM Journal on Discrete Mathematics}, 24(3):946--963, 2010.
+
+\bibitem{Razborov2008}
+Alexander~A. Razborov.
+\newblock On the minimal density of triangles in graphs.
+\newblock {\em Combinatorics, Probability and Computing}, 17(4):603--618, 2008.
+
+\bibitem{rechenberg_2006}
+Ingo Rechenberg.
+\newblock Point configurations with minimal distance ratio, 2006.
+
+\bibitem{recht2012beneath}
+Benjamin Recht and Christopher R{\'e}.
+\newblock Beneath the valley of the noncommutative arithmetic-geometric mean inequality: conjectures, case-studies, and consequences, 2012.
+\newblock arXiv:1202.4184.
+
+\bibitem{redei-renyi}
+L.~R\'edei and A.~R\'enyi.
+\newblock On the representation of the numbers $\{1,2,\ldots, {N}\}$ by means of differences.
+\newblock {\em Mat. Sbornik N.S.}, 24/66:385--389, 1949.
+
+\bibitem{Robinson1961}
+R.~M. Robinson.
+\newblock {Arrangement of 24 Circles on a Sphere}.
+\newblock {\em Mathematische Annalen}, 144:17--48, 1961.
+
+\bibitem{romeraparedes2023mathematical}
+Bernardino Romera-Paredes, Mohammadamin Barekatain, Alexander Novikov, Matej Balog, M.~Pawan Kumar, Emilien Dupont, Francisco J.~R. Ruiz, Jordan Ellenberg, Pengming Wang, Omar Fawzi, Pushmeet Kohli, and Alhussein Fawzi.
+\newblock Mathematical discoveries from program search with large language models.
+\newblock {\em Nature}, 625(7995):468--475, 2023.
+
+\bibitem{Romik}
+D.~Romik.
+\newblock Differential equations and exact solutions in the moving sofa problem.
+\newblock {\em Experimental Mathematics}, 27:316--330, 2018.
+
+\bibitem{ruzsa}
+I.~Ruzsa.
+\newblock Sums of finite sets.
+\newblock In D.~V. Chudnovsky, G.~V. Chudnovsky, and M.~B. Nathanson, editors, {\em Number Theory: New York Seminar}. Springer-Verlag, 1996.
+
+\bibitem{ruzsa-squares}
+Imre~Z. Ruzsa.
+\newblock Difference sets without squares.
+\newblock {\em Periodica Mathematica Hungarica}, 15:205--209, 1984.
+
+\bibitem{saffkuijlaars}
+E.~B. Saff and A.~B.~J. Kuijlaars.
+\newblock Distributing many points on a sphere.
+\newblock {\em The Mathematical Intelligencer}, 19(1):5--11, 1997.
+
+\bibitem{sarkozy}
+A.~S\'ark\H~ozy.
+\newblock On difference sets of sequences of integers. {I}.
+\newblock {\em Acta Math. Acad. Sci. Hungar.}, 31(1-2):125--149, 1978.
+
+\bibitem{schellhorn_personal}
+Johann Schellhorn.
+\newblock Personal communication, September 2025.
+\newblock Email to the authors of the AlphaEvolve whitepaper, analyzing the published hexagon packing constructions.
+
+\bibitem{scheucher2020}
+Manfred Scheucher.
+\newblock Two disjoint 5-holes in point sets.
+\newblock {\em Computational Geometry}, 91:101670, 2020.
+
+\bibitem{schmeisser}
+G.~Schmeisser.
+\newblock On {I}lieff's conjecture.
+\newblock {\em Mathematische Zeitschrift}, 156:165--173, 1977.
+
+\bibitem{schmeisser1969}
+Gerhard Schmeisser.
+\newblock Bemerkungen zu einer {Vermutung} von {Ilieff}.
+\newblock {\em Mathematische Zeitschrift}, 111:121--125, 1969.
+
+\bibitem{schrijver1999ring}
+Alexander Schrijver, Paul Seymour, and Peter Winkler.
+\newblock The ring loading problem.
+\newblock {\em SIAM review}, 41(4):777--791, 1999.
+
+\bibitem{SchutteWaerden1951}
+K.~Sch{\"u}tte and B.~L. van~der Waerden.
+\newblock Auf welcher {K}ugel haben 5,6,7,8 oder 9 {P}unkte mit {M}indestabstand 1 {P}latz?
+\newblock {\em Mathematische Annalen}, 123:96--124, 1951.
+
+\bibitem{schwartz2013}
+Richard~Evan Schwartz.
+\newblock {The Five-Electron Case of Thomson's Problem}.
+\newblock {\em Experimental Mathematics}, 22(2):157--186, 2013.
+
+\bibitem{sendov}
+Bl. Sendov.
+\newblock On the critical points of a polynomial.
+\newblock {\em East Journal on Approximations}, 1(2):255--258, 1995.
+
+\bibitem{sharma2025openevolve}
+Asankhaya Sharma.
+\newblock Openevolve: an open-source evolutionary coding agent.
+\newblock \url{https://github.com/codelion/openevolve}, 2025.
+\newblock Open-source implementation of AlphaEvolve.
+
+\bibitem{shepherd2009single}
+F~Bruce Shepherd.
+\newblock Single-sink multicommodity flow with side constraints.
+\newblock In {\em Research Trends in Combinatorial Optimization: Bonn 2008}, pages 429--450. Springer, 2009.
+
+\bibitem{Sidorenko93}
+Alexander Sidorenko.
+\newblock A correlation inequality for bipartite graphs.
+\newblock {\em Graphs and Combinatorics}, 9:201--204, 1993.
+
+\bibitem{singer1938theorem}
+James Singer.
+\newblock A theorem in finite projective geometry and some applications to number theory.
+\newblock {\em Transactions of the American Mathematical Society}, 43(3):377--385, 1938.
+
+\bibitem{skutella2016note}
+Martin Skutella.
+\newblock A note on the ring loading problem.
+\newblock {\em SIAM Journal on Discrete Mathematics}, 30(1):327--342, 2016.
+
+\bibitem{sloane1994maximal}
+N.~J.~A. Sloane.
+\newblock {Maximal Volume Spherical Codes}.
+\newblock Online tables, 1994.
+\newblock Part of ongoing work on spherical codes with R. H. Hardin and W. D. Smith.
+
+\bibitem{SloaneSphericalCodes}
+N.~J.~A. Sloane, R.~H. Hardin, W.~D. Smith, et~al.
+\newblock {Tables of Spherical Codes}.
+\newblock Published electronically at \url{http://neilsloane.com/packings/}, 1994--2024.
+\newblock Copyright R. H. Hardin, N. J. A. Sloane \& W. D. Smith, 1994--1996.
+
+\bibitem{sloane_spherical}
+Neil J.~A. Sloane.
+\newblock {Spherical Designs}.
+
+\bibitem{smale}
+S.~Smale.
+\newblock The fundamental theorem of algebra and complexity theory.
+\newblock {\em Bulletin of the American Mathematical Society}, 4(1):1--36, 1981.
+
+\bibitem{smale1998mathematical}
+Stephen Smale.
+\newblock {Mathematical Problems for the Next Century}.
+\newblock {\em The Mathematical Intelligencer}, 20(2):7--15, 1998.
+
+\bibitem{smullyan1986name}
+Raymond Smullyan.
+\newblock {\em What is the name of this book?}
+\newblock Touchstone Books Guildford, UK, 1986.
+
+\bibitem{solymosierdos}
+J\'ozsef Solymosi.
+\newblock Triangles in the integer grid $[n] \times [n]$.
+\newblock 2023.
+
+\bibitem{solymosi2025perles}
+J\'ozsef Solymosi.
+\newblock {On Perles’ Configuration}.
+\newblock {\em SIAM Journal on Discrete Mathematics}, 39(2):912--920, 2025.
+
+\bibitem{suk2024note}
+Andrew Suk and Ethan~Patrick White.
+\newblock A note on the no-$(d+ 2) $-on-a-sphere problem.
+\newblock {\em arXiv:2412.02866}, 2024.
+
+\bibitem{swirszcz2025advancing}
+Grzegorz Swirszcz, Adam~Zsolt Wagner, Geordie Williamson, Sam Blackwell, Bogdan Georgiev, Alex Davies, Ali Eslami, Sebastien Racaniere, Theophane Weber, and Pushmeet Kohli.
+\newblock Advancing geometry with {AI}: {M}ulti-agent generation of polytopes.
+\newblock {\em arXiv preprint arXiv:2502.05199}, 2025.
+
+\bibitem{sylvester}
+J.~Sylvester.
+\newblock On {T}chebycheff's theory of the totality of the prime numbers comprised within given limits.
+\newblock In {\em The collected mathematical papers of James Joseph Sylvester. Vol. 3, (1870-1883)}, pages 530--549. Cambridge University Press, Cambridge, 1909.
+
+\bibitem{Szegedy2014}
+B.~Szegedy.
+\newblock {An information theoretic approach to Sidorenko's conjecture}, 2014.
+\newblock arXiv:1406.6738.
+
+\bibitem{szekeres2006}
+George Szekeres and Lindsay Peters.
+\newblock Computer solution to the 17-point {Erd{\H{o}}s--Szekeres} problem.
+\newblock {\em ANZIAM Journal}, 48(2):151--164, 2006.
+
+\bibitem{szemeredi-trotter}
+Endre Szemer{\'e}di and William T.~jun. Trotter.
+\newblock Extremal problems in discrete geometry.
+\newblock {\em Combinatorica}, 3:381--392, 1983.
+
+\bibitem{szonyi}
+Tam{\'a}s Sz{\H{o}}nyi, Antonello Cossidente, Andr{\'a}s G{\'a}cs, Csaba Mengy{\'a}n, Alessandro Siciliano, and Zsuzsa Weiner.
+\newblock On large minimal blocking sets in {PG}{{\((2,q\)}}).
+\newblock {\em J. Comb. Des.}, 13(1):25--41, 2005.
+
+\bibitem{Tammes1930}
+R.~M.~L. Tammes.
+\newblock {On the Origin Number and Arrangement of the Places of Exits on the Surface of Pollengrains}.
+\newblock {\em Recueil des Travaux Botaniques N\'eerlandais}, 27:1--84, 1930.
+
+\bibitem{tao-sendov}
+T.~Tao.
+\newblock Sendov's conjecture for sufficiently high degree polynomials.
+\newblock {\em Acta Mathematica}, 229(2):347--392, 2022.
+
+\bibitem{tao-erdos}
+Terence Tao.
+\newblock The {Erd{\H{o}}s} discrepancy problem.
+\newblock {\em Discrete Anal.}, 2016:29, 2016.
+\newblock Id/No 1.
+
+\bibitem{tao-kakeya}
+Terence Tao.
+\newblock Arithmetic {K}akeya exponents for slopes of high arithmetic circuit complexity.
+\newblock Manuscript in preparation, 2025.
+
+\bibitem{tao-nikodym}
+Terence Tao.
+\newblock A {N}ikodym set construction over finite fields.
+\newblock Manuscript in preparation, 2025.
+
+\bibitem{thakur2024incontext}
+Amitayush Thakur, George Tsoukalas, Yeming Wen, Jimmy Xin, and Swarat Chaudhuri.
+\newblock An in-context learning agent for formal theorem-proving.
+\newblock In {\em Conference on Language Models}, 2024.
+
+\bibitem{thiele1995geometric}
+Torsten Thiele.
+\newblock {\em Geometric selection problems and hypergraphs}.
+\newblock PhD thesis, Citeseer, 1995.
+
+\bibitem{thomson}
+J.~J. Thomson.
+\newblock On the structure of the atom.
+\newblock {\em Philosophical Magazine}, 7:237--265, 1904.
+
+\bibitem{FejesToth1943}
+L.~Fejes T{\'o}th.
+\newblock {\"U}ber die {A}bsch{\"a}tzung des k{\"u}rzesten {A}bstandes zweier {P}unkte eines auf einer {K}ugelfl{\"a}che liegenden {P}unktsystems.
+\newblock {\em Jahresbericht der Deutschen Mathematiker-Vereinigung}, 53:66--68, 1943.
+
+\bibitem{trinh2024solving}
+Trieu~H. Trinh, Yuhuai Wu, Quoc~V. Le, He~He, and Thang Luong.
+\newblock {Solving Olympiad Geometry without Human Demonstrations}.
+\newblock {\em Nature}, 625(7995):476--482, 2024.
+
+\bibitem{tso1999}
+S.-H. Tso and P.-Y. Wu.
+\newblock Matricial ranges of quadratic operators.
+\newblock {\em Rocky Mountain Journal of Mathematics}, 29(3):1139--1152, 1999.
+
+\bibitem{viazovska}
+M.~S. Viazovska.
+\newblock The sphere packing problem in dimension 8.
+\newblock {\em Annals of Mathematics}, 185:991--1015, 2017.
+
+\bibitem{Wagner2021}
+Adam~Zsolt Wagner.
+\newblock Constructions in combinatorics via neural networks.
+\newblock {\em arXiv:2104.14516}, 2021.
+
+\bibitem{wagner1990mean}
+G.~Wagner.
+\newblock On mean distances on the surface of the sphere (lower bounds).
+\newblock {\em Pacific Journal of Mathematics}, 144(2):389--398, 1990.
+
+\bibitem{wagner1992mean}
+G.~Wagner.
+\newblock On mean distances on the surface of the sphere {II}. upper bounds.
+\newblock {\em Pacific Journal of Mathematics}, 154(2):381--396, 1992.
+
+\bibitem{wang-zahl}
+Hong Wang and Joshua Zahl.
+\newblock Volume estimates for unions of convex sets, and the {K}akeya set conjecture in three dimensions, 2025.
+\newblock arXiv:2502.17655.
+
+\bibitem{wang2025discovery}
+Yongji Wang, Mehdi Bennani, James Martens, S\'ebastien Racani\`ere, Sam Blackwell, Alex Matthews, Stanislav Nikolov, Gonzalo Cao-Labora, Daniel~S. Park, Martin Arjovsky, Daniel Worrall, Chongli Qin, Ferran Alet, Borislav Kozlovskii, Nenad Toma{\v{s}}ev, Alex Davies, Pushmeet Kohli, Tristan Buckmaster, Bogdan Georgiev, Javier G{\'o}mez-Serrano, Ray Jiang, and Ching-Yao Lai.
+\newblock {Discovery of Unstable Singularities}, 2025.
+\newblock arXiv:2509.14185.
+
+\bibitem{wang2023asymptotic}
+Yongji Wang, Ching-Yao Lai, Javier Gómez-Serrano, and Tristan Buckmaster.
+\newblock {Asymptotic Self-Similar Blow-Up Profile for Three-Dimensional Axisymmetric Euler Equations Using Neural Networks}.
+\newblock {\em Physical Review Letters}, 130(24):244002, 2023.
+
+\bibitem{Wei2025}
+Alexander Wei.
+\newblock {Gold medal-level performance on the world's most prestigious math competition—the International Math Olympiad (IMO).}
+\newblock \url{https://x.com/alexwei_/status/1946477742855532918}, 2025.
+
+\bibitem{Weinstein}
+M.~I. Weinstein.
+\newblock Nonlinear {S}chr{\"o}dinger equations and sharp interpolation estimates.
+\newblock {\em Communications in Mathematical Physics}, 87:567--576, 1983.
+
+\bibitem{White-2}
+E.~White.
+\newblock A new bound for {E}rd{\H{o}}s' minimum overlap problem.
+\newblock {\em Acta Arithmetica}, 208(3):235--255, 2023.
+
+\bibitem{wu2016counting}
+Chai~Wah Wu.
+\newblock Counting the number of isosceles triangles in rectangular regular grids.
+\newblock {\em arXiv:1605.00180}, 2016.
+
+\bibitem{yang2024formal}
+Kaiyu Yang, Gabriel Poesia, Jingxuan He, Wenda Li, Kristin Lauter, Swarat Chaudhuri, and Dawn Song.
+\newblock Formal mathematical reasoning: A new frontier in {AI}, 2024.
+
+\bibitem{yang2023leandojo}
+Kaiyu Yang, Aidan Swope, Alex Gu, Rahul Chalamala, Peiyang Song, Shixing Yu, Saad Godil, Ryan~J. Prenger, and Animashree Anandkumar.
+\newblock Leandojo: Theorem proving with retrieval-augmented language models.
+\newblock In {\em Advances in Neural Information Processing Systems}, volume~36, pages 21573--21612, 2023.
+
+\bibitem{yang_zeng_1995}
+Lu~Yang and Zhenbing Zeng.
+\newblock Heilbronn problem for seven points in a planar convex body.
+\newblock In Ding-Zhu Du and Panos~M. Pardalos, editors, {\em Minimax and Applications}, volume~4 of {\em Nonconvex Optimization and Its Applications}, pages 191--218, Boston, MA, 1995. Springer.
+\newblock Proved optimal solution for 7 points with area bound $1/9$.
+
+\bibitem{yangzhangzeng}
+Lu~Yang, Jingzhong Zhang, and Zhenbing Zeng.
+\newblock On a conjecture on and computation of the first {Heilbronn} numbers.
+\newblock {\em Chin. Ann. Math., Ser. A}, 13(4):503--515, 1992.
+
+\bibitem{yudin1992}
+V.~A. Yudin.
+\newblock {Minimum Potential Energy of a Point System of Charges}.
+\newblock {\em Diskret. Mat.}, 4:115--121, 1992.
+\newblock in Russian; English translation in Discrete Math. Appl. 3 (1993) 75--81.
+
+\bibitem{zheng2025sums}
+Fan Zheng.
+\newblock Sums and differences of sets: a further improvement over {AlphaEvolve}, 2025.
+\newblock arXiv:2506.01896.
+
+\end{thebibliography}

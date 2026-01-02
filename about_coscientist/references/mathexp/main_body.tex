@@ -1,0 +1,220 @@
+
+
+\begin{abstract}
+
+\AlphaEvolve~\cite{novikov2025alphaevolve} is a generic evolutionary coding agent that combines the generative capabilities of LLMs with automated evaluation in an iterative evolutionary framework that proposes, tests, and refines algorithmic solutions to challenging scientific and practical problems. In this paper we showcase \AlphaEvolve as a tool for autonomously discovering novel mathematical constructions and advancing our understanding of long-standing open problems.
+
+To demonstrate its breadth, we considered a list of 67 problems spanning mathematical analysis, combinatorics, geometry, and number theory. The system rediscovered the best known solutions in  most of the cases and discovered improved solutions in several. In some instances, \AlphaEvolve is also able to \textit{generalize} results for a finite number of input values into a  formula valid for all input values. Furthermore, we are able to combine this methodology with \DeepThink \cite{deepmind2025dt} and \AlphaProof \cite{deepmind2024alphaproof} in a broader framework where the additional proof-assistants and reasoning systems provide automated proof generation and further mathematical insights.
+
+These results demonstrate that large language model-guided evolutionary search can autonomously discover mathematical constructions that complement human intuition, at times matching or even improving the best known results, highlighting the potential for significant new ways of interaction between mathematicians and AI systems.
+We present \AlphaEvolve as a powerful new tool for mathematical discovery, capable of exploring vast search spaces to solve complex optimization problems at scale, often with significantly reduced requirements on preparation and computation time.
+\end{abstract}
+
+
+\maketitle
+
+
+
+
+
+\section{Introduction}
+
+
+The landscape of mathematical discovery has been fundamentally transformed by the emergence of computational tools that can autonomously explore mathematical spaces and generate novel constructions~\cite{charton2024patternboost, fawzi2022discovering,  romeraparedes2023mathematical, Wagner2021}.  \AlphaEvolve represents a step in this evolution, demonstrating that large language models, when combined with evolutionary computation and rigorous automated evaluation, can discover explicit constructions that either match or improve upon the best-known bounds to long-standing mathematical problems, at large scales.
+
+\AlphaEvolve is not a general-purpose solver for all types of mathematical problems; it is primarily designed to attack problems in which a key objective is to construct a complex mathematical object that satisfies good quantitative properties, such as obeying a certain inequality with a good numerical constant.  In this paper, we report on our experiments testing the performance of \AlphaEvolve on a wide variety of such problems, primarily in the areas of analysis, combinatorics, and geometry.  In many cases, the constructions provided by \AlphaEvolve were not merely numerical in nature, but can be interpreted and generalized by human mathematicians, by other tools such as \DeepThink, and even by \AlphaEvolve itself.  \AlphaEvolve was not able to match or exceed previous results in all cases, and some of the individual improvements it was able to achieve could likely also have been matched by more traditional computational or theoretical methods performed by human experts.  However, in contrast to such methods, we have found that \AlphaEvolve can be readily scaled up to study large classes of problems at a time, without requiring extensive expert supervision for each new problem.  This demonstrates that evolutionary computational approaches can systematically explore the space of mathematical objects in ways that complement traditional techniques, thus helping answer questions about the relationship between computational search and mathematical existence proofs.
+
+We have also seen that in many cases, besides the scaling, in order to get \AlphaEvolve to output comparable results to the literature and in contrast to traditional ways of doing mathematics, very little overhead is needed: on average the usual preparation time for the setup of a problem using \AlphaEvolve took only up to a few hours. We expect that without prior knowledge, information or code, an equivalent traditional setup would typically take significantly longer. This has led us to use the term \textit{constructive mathematics at scale}.
+
+
+A crucial mathematical insight underlying \AlphaEvolve's effectiveness is its ability to operate across multiple levels of abstraction simultaneously. The system can optimize not just the specific parameters of a mathematical construction, but also the algorithmic strategy for discovering such constructions. This meta-level evolution represents a new form of recursion where the optimization process itself becomes the object of optimization. For example, \AlphaEvolve might evolve a program that uses a set of heuristics, a SAT solver, a second order method without convergence guarantee, or combinations of them. This hierarchical approach is particularly evident in \AlphaEvolve's treatment of complex mathematical problems (suggested by the user), where the system often discovers specialized search heuristics for different phases of the optimization process. Early-stage heuristics excel at making large improvements from random or simple initial states, while later-stage heuristics focus on fine-tuning near-optimal configurations. This emergent specialization mirrors the intuitive approaches employed by human mathematicians.
+
+\subsection{Comparison with \cite{novikov2025alphaevolve}.}
+Some details of our results were already mentioned in \cite{novikov2025alphaevolve}. The purpose of that white paper was to introduce \AlphaEvolve and highlight its general broad applicability. While the paper discussed impact and some usage in the context of mathematics, we have here expanded on the list of considered problems in terms of their breadth, hardness and importance. We now give full details for all of them. The problems below are arranged in no particular order. For reasons of space, we do not attempt to exhaustively survey the history of each of the problems listed here, and refer the reader to the references provided for each problem for a more in-depth discussion of known results.
+
+
+Along with this paper, we will also release a live \Repo with code containing some experiments and extended details of the problems. While the presence of randomness in the evolution process may make reproducibility harder, we expect our results to be fully reproducible with the information given and enough experiments.
+
+
+
+\subsection{AI and Mathematical Discovery}
+
+The emergence of artificial intelligence as a transformative force in mathematical discovery has marked a paradigm shift in how we approach some of mathematics' most challenging problems. Recent breakthroughs \cite{davies2021advancing, he2022murmurations, douglas2022numerical, coolsaet2023house, wang2023asymptotic,alfarano2024global, swirszcz2025advancing,wang2025discovery} have demonstrated AI's capability to assist mathematicians. \AlphaGeometry solved 25 out of 30 Olympiad geometry problems within standard time limits \cite{trinh2024solving}. \AlphaProof and \AlphaGeometry 2 \cite{deepmind2024alphaproof} achieved silver-medal performance at the 2024 International Mathematical Olympiad followed by a gold-medal performance of an advanced Gemini \DeepThink framework at the 2025 International Mathematical Olympiad \cite{deepmind2025dt}. See \cite{Wei2025} for a gold-medal performance by a model from OpenAI. Beyond competition performance, AI has begun making genuine mathematical discoveries, as demonstrated by FunSearch \cite{romeraparedes2023mathematical}, discovering new solutions to the cap set problem and more effective bin-packing algorithms (see also \cite{ellenberg2025generative}), or PatternBoost \cite{charton2024patternboost} disproving a 30-year old conjecture (see also \cite{Wagner2021}), or precursors such as Graffiti \cite{fajtlowicz1988conjectures} generating conjectures. Other instances of AI helping mathematicians are for example \cite{collins2024evaluating,thakur2024incontext,yang2023leandojo,yang2024formal}, in the context of finding formal and informal proofs of mathematical statements. While \AlphaEvolve is geared more towards exploration and discovery, we have been able to pipeline it with other systems in a way that allows us not only to explore but also to combine our findings with a mathematically rigorous proof as well as a formalization of it. 
+
+\subsection{Evolving Algorithms to Find Constructions}
+
+At its core, \AlphaEvolve is a sophisticated search algorithm. To understand its design, it is helpful to start with a familiar idea: local search. To solve a problem like finding a graph on 50 vertices with no triangles and no cycles of length four, and the maximum number of edges, a standard approach would be to start with a random graph, and then iteratively make small changes (e.g., adding or removing an edge) that improve its score (in this case, the edge count, penalized for any triangles or four-cycles). We keep `hill-climbing' until we can no longer improve.
+
+\begin{table}[H]
+\small
+\rowcolors{2}{white}{gray!20}
+\begin{center}
+\begin{tabular}{ll} \toprule
+    \texttt{FunSearch}~\cite{romeraparedes2023mathematical} & \AlphaEvolve \\
+    \midrule
+    evolves single function & evolves entire code file\\
+    evolves up to 10-20 lines of code & evolves up to hundreds of lines of code\\
+    evolves code in Python & evolves any language\\
+    needs fast evaluation ($\leq 20$min on 1 CPU)\;\; & can evaluate for hours, in parallel, on accelerators\\
+    millions of LLM samples used & thousands of LLM samples suffice\\
+    small LLMs used; no benefit from larger & benefits from SotA LLMs\\ 
+    minimal context (only previous solutions) & rich context and feedback in prompts\\
+    optimizes single metric & can simultaneously optimize multiple metrics\\
+    \bottomrule
+\end{tabular}
+\caption{Capabilities and typical behaviors of \AlphaEvolve and FunSearch. Table reproduced from \cite{novikov2025alphaevolve}.}
+\label{tab:funsearch-vs-alphaevolve}
+\end{center}
+\end{table}
+
+
+
+
+
+The first key idea, inherited from \AlphaEvolve's predecessor, FunSearch~\cite{romeraparedes2023mathematical} (see Table~\ref{tab:funsearch-vs-alphaevolve} for a head to head comparison) and its reimplementation \cite{ellenberg2025generative},
+is to perform this local search not in the space of graphs, but in the space of Python programs that \textit{generate} graphs. We start with a simple program, then use a large language model (LLM) to generate many similar but slightly different programs (`mutations'). We score each program by running it and evaluating the graph it produces. It is natural to wonder why this approach would be beneficial. An LLM call is usually vastly more expensive than adding an edge or evaluating a graph, so this way we can often explore thousands or even millions of times fewer candidates than with standard local search methods. Many `nice' mathematical objects, like the optimal Hoffman-Singleton graph for the aforementioned problem \cite{goedgebeur2025improved}, have short, elegant descriptions as code. Moreover even if there is only one optimal construction for a problem, there can be many different, natural programs that generate it. Conversely, the countless `ugly' graphs that are local optima might not correspond to any simple program. Searching in program space might act as a powerful prior for simplicity and structure, helping us navigate away from messy local maxima towards elegant, often optimal, solutions. In the case where the optimal solution does not admit a simple description, even by a program, and the best way to find it is via heuristic methods, we have found that \AlphaEvolve excels at this task as well. 
+
+Still, for problems where the scoring function is cheap to compute, the sheer brute-force advantage of traditional methods can be hard to overcome. Our proposed solution to this problem is as follows. Instead of evolving programs that directly \textit{generate} a construction, \AlphaEvolve evolves programs that \textit{search for} a construction. This is what we refer to as the \emph{search mode} of \AlphaEvolve, and it was the standard mode we used for all the problems where the goal was to find good constructions, and we did not care about their interpretability and generalizability.
+
+Each program in \AlphaEvolve's population is a search heuristic. It is given a fixed time budget (say, 100 seconds) and tasked with finding the best possible construction within that time. The score of the heuristic is the score of the best object it finds. This resolves the speed disparity: a single, slow LLM call to generate a new search heuristic can trigger a massive cheap computation, where that heuristic explores millions of candidate constructions on its own.
+
+We emphasize that the search does not have to start from scratch each time. Instead, a new heuristic is evaluated on its ability to \textit{improve the best construction found so far}. We are thus evolving a population of `improver' functions. This creates a dynamic, adaptive search process. In the beginning, heuristics that perform broad, exploratory searches might be favored. As we get closer to a good solution, heuristics that perform clever, problem-specific refinements might take over. The final result is often a sequence of specialized heuristics that, when chained together, produce a state-of-the-art construction. The downside is a potential loss of interpretability in the search \textit{process}, but the final \textit{object} it discovers remains a well-defined mathematical entity for us to study. This addition seems to be particularly useful for more difficult problems, where a single search function may not be able to discover a good solution by itself. 
+
+\subsection{Generalizing from Examples to Formulas: the \emph{generalizer mode}}
+
+Beyond finding constructions for a fixed problem size (e.g., packing for $n=11$) on which the above \emph{search mode} excelled, we have experimented with a more ambitious \emph{generalizer mode}. Here, we tasked \AlphaEvolve with writing a program that can solve the problem for any given $n$. We evaluate the program based on its performance across a range of $n$ values. The hope is that by seeing its own (often optimal) solutions for small $n$, \AlphaEvolve can spot a pattern and generalize it into a construction that works for all $n$.
+
+This mode is more challenging, but it has produced some of our most exciting results. In one case, \AlphaEvolve's proposed construction for the Nikodym problem (see Problem \ref{nikodym}) inspired a new paper by the third author \cite{tao-nikodym}. On the other hand, when using the \emph{search mode}, the evolved programs can not easily be interpreted. Still, the final  \emph{constructions} themselves can be analyzed, and in the case of the artihmetic Kakeya problem (Problem~\ref{arith}) they inspired another paper by the third author~\cite{tao-kakeya}.
+
+\subsection{Building a pipeline of several AI tools}
+Even more strikingly, for the finite field Kakeya problem (cf. Problem \ref{nikodym}), \AlphaEvolve discovered an interesting general construction. When we fed this programmatic solution to the agent  called \DeepThink \cite{deepmind2025dt}, it successfully derived a proof of its correctness and a closed-form formula for its size. This proof was then fully formalized in the Lean proof assistant using another AI tool, \AlphaProof \cite{deepmind2024alphaproof}. 
+This workflow, combining pattern discovery (\AlphaEvolve), symbolic proof generation (\DeepThink), and formal verification (\AlphaProof), serves as a concrete example of how specialized AI systems can be integrated. It suggests a future potential methodology where a combination of AI tools can assist in the process of moving from an empirically observed pattern (suggested by the model) to a formally verified mathematical result, fully automated or semi-automated.
+
+%This showcases a powerful potential workflow for the future: a pipeline of AI systems that can go from discovering a pattern to producing and validating a machine-checkable proof.
+
+
+
+\subsection{Limitations}
+
+We would also like to point out that while \AlphaEvolve excels at problems that can be clearly formulated as the optimization of a smooth score function that is possible to `hill-climbing' on, it sometimes struggles otherwise. In particular, we have encountered several instances where \AlphaEvolve failed to attain an optimal or close to optimal result. We also report these cases below. In general, we have found \AlphaEvolve most effective when applied at a large scale across a broad portfolio of loosely related problems such as, for example,  packing problems or Sendov's conjecture and its variants.
+
+
+In Section~\ref{sec:problems}, we will detail the new mathematical results discovered with this approach, along with all the examples we found where \AlphaEvolve did not manage to find the previously best known construction. We hope that this work will not only provide new insights into these specific problems but also inspire other scientists to explore how these tools can be adapted to their own areas of research.
+
+
+
+
+\section{General Description of \AlphaEvolve and Usage}
+
+As introduced in \cite{novikov2025alphaevolve}, \AlphaEvolve establishes a framework that combines the creativity of LLMs with automated evaluators. Some of its description and usage appears there and we discuss it here in order for this paper to be self-contained.  At its heart, \AlphaEvolve is an evolutionary system. The system maintains a population of programs, each encoding a potential solution to a given problem. This population is iteratively improved through a loop that mimics natural selection.
+
+The evolutionary process consists of two main components:
+\begin{enumerate}
+    \item A Generator (LLM): This component is responsible for introducing variation. It takes some of the better-performing programs from the current population and `mutates' them to create new candidate solutions. This process can be parallelized across several CPUs. By leveraging an LLM, these mutations are not random character flips but intelligent, syntactically-aware modifications to the code, inspired by the logic of the parent programs and the expert advice given by the human user.
+    \item An Evaluator (typically provided by the user): This is the `fitness function'. It is a deterministic piece of code that takes a program from the population, runs it, and assigns it a numerical score based on its performance. For a mathematical construction problem, this score could be how well the construction satisfies certain properties (e.g., the number of edges in a graph, or the density of a packing).
+\end{enumerate}
+
+The process begins with a few simple initial programs. In each generation, some of the better-scoring programs are selected and fed to the LLM to generate new, potentially better, offspring. These offspring are then evaluated, scored, and the higher scoring ones among them will form the basis of the future programs. This cycle of generation and selection allows the population to `evolve` over time towards programs that produce increasingly high-quality solutions. Note that since every evaluator has a fixed time budget, the total CPU hours spent by the evaluators is directly proportional to the total number of LLM calls made in the experiment. For more details and applications beyond mathematical problems, we refer the reader to~\cite{novikov2025alphaevolve}. For further applications and improvements of \AlphaEvolve to MAX-CUT, MAX-$k$-CUT and MAX-Independent Set problems see \cite{nagda2025reinforced}. After \AlphaEvolve was released, other open-source implementations of  frameworks leveraging LLMs for scientific discovery were developed such as OpenEvolve \cite{sharma2025openevolve}, ShinkaEvolve \cite{lange2025shinkaevolve} or DeepEvolve \cite{liu2025deepevolve}.
+
+
+When applied to mathematics, this framework is particularly powerful for finding constructions with extremal properties. As described in the introduction, we primarily use it in a \emph{search mode}, where the programs being evolved are not direct constructions but are themselves heuristic search algorithms. The evaluator gives one of these evolved heuristics a fixed time budget and scores it based on the quality of the best construction it can find in that time. This method turns the expensive, creative power of the LLM towards designing efficient search strategies, which can then be executed cheaply and at scale. This allows \AlphaEvolve to effectively navigate vast and complex mathematical landscapes, discovering the novel constructions we detail in this paper.
+
+
+
+
+\section{Meta-Analysis and Ablations}
+
+
+
+To better understand the behavior and sensitivities of \AlphaEvolve, we conducted a series of meta-analyses and ablation studies. These experiments are designed to answer practical questions about the method: How do computational resources affect the search? What is the role of the underlying LLM? What are the typical costs involved? For consistency, many of these experiments use the  autocorrelation inequality  (Problem \ref{first-auto}) as a testbed, as it provides a clean, fast-to-evaluate objective.
+
+%----------------------------------------------------------------------------------------
+
+\subsection{The Trade-off Between Speed of Discovery and Evaluation Cost}
+
+A key parameter in any \AlphaEvolve run is the amount of parallel computation used (e.g., the number of CPU threads). Intuitively, more parallelism should lead to faster discoveries. We investigated this by running Problem \ref{first-auto} with varying numbers of parallel threads (from 2 up to 20).
+
+Our findings (see Figure~\ref{fig:meta_anal1}), while noisy, seem to align with this expected trade-off. Increasing the number of parallel threads significantly accelerated the time-to-discovery. Runs with 20 threads consistently surpassed the state-of-the-art bound much faster than those with 2 threads. However, this speed comes at a higher total cost. Since each thread operates semi-independently and makes its own calls to the LLM to generate new heuristics, doubling the threads roughly doubles the rate of LLM queries. Even though the threads communicate with each other and build upon each other's best constructions, achieving the result faster requires a greater total number of LLM calls. The optimal strategy depends on the researcher's priority: for rapid exploration, high parallelism is effective; for minimizing direct costs, fewer threads over a longer period is the more economical choice. 
+
+\begin{center}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6975\linewidth]{figures/ablation_new_2.png}
+        \includegraphics[width=0.6975\linewidth]{figures/ablation_new_3.png}
+        \caption{Performance on Problem \ref{first-auto}: running \AlphaEvolve with more parallel threads leads to the discovery of good constructions faster, but at a greater total compute cost. The results displayed are the averages of 100 experiments with 2 CPU threads, 40 experiments with 5 CPU threads, 20 experiments with 10 CPU threads, and 10 experiments with 20 CPU threads.}
+        \label{fig:meta_anal1}
+    \end{figure}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\subsection{The Role of Model Choice: Large vs. Cheap LLMs}
+
+AlphaEvolve's performance is fundamentally tied to the LLM used for generating code mutations. We compared the effectiveness of a high-performance LLM against a much smaller, cheaper model (with a price difference of roughly 15x per input token and 30x per output token). 
+
+We observed that the more capable LLM tends to produce higher-quality suggestions (see Figure~\ref{fig:meta_anal2}), often leading to better scores with fewer evolutionary steps. However, the most effective strategy was not always to use the most powerful model exclusively. For this simple autocorrelation problem, the most cost-effective strategy to beat the literature bound was to use the cheapest model across many runs. The total LLM cost for this was remarkably low: a few USD. However, for the more difficult problem of Nikodym sets (see Problem $\ref{nikodym}$), the cheap model was not able to get the most elaborate constructions. 
+
+We also observed that an experiment using only high-end models can sometimes perform worse than a run that occasionally used cheaper models as well. One explanation for this is that different models might suggest very different approaches, and even though a worse model generally suggests lower quality ideas, it does add variance. This suggests a potential benefit to injecting a degree of randomness or ``naive creativity'' into the evolutionary process. We suspect that for problems requiring deeper mathematical insight, the value of the smarter LLM would become more pronounced, but for many optimization landscapes, diversity from cheaper models is a powerful and economical tool.
+
+\begin{center}
+   \begin{figure}
+       \centering
+       \includegraphics[width=0.6\linewidth]{figures/ablation_new_1.png}
+       \caption{Comparison of 50 experiments on Problem \ref{first-auto} using a cheap LLM and 20 experiments using a more expensive LLM. The experiments using a cheaper LLM required about twice as many calls as the ones using expensive ones, and this ratio tends to be even larger for more difficult problems. }
+       \label{fig:meta_anal2}
+   \end{figure}
+\end{center}
+
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Conclusions}
+
+Our exploration of \AlphaEvolve has yielded several key insights, which are summarized below. We have found that the selection of the verifier is a critical component that significantly influences the system's performance and the quality of the discovered results.
+For example, sometimes the optimizer will be drawn more towards more stable (trivial) solutions which we want to avoid. Designing a clever verifier that avoids this behavior is key to discover new results.
+
+Similarly, employing continuous (as opposed to discrete) loss functions proved to be a more effective strategy for guiding the evolutionary search process in some cases. For example, for Problem \ref{touch} we could have 
+designed our scoring function as the number of touching cylinders of any given configuration (or $-\infty$ if the configuration is illegal). By looking at a continuous scoring function depending on the distances led to a more successful and faster optimization process.
+
+During our experiments, we also observed a ``cheating phenomenon'', where the system would find loopholes or exploit artifacts (leaky verifier when approximating global constraints such as positivity by discrete versions of them, unreliable LLM queries to cheap models, etc.) in the problem setup rather than genuine solutions, highlighting the need for carefully designed and robust evaluation environments.
+
+
+Another important component is the advice given in the prompt and the experience of the prompter. We have found that we got better at knowing how to prompt \AlphaEvolve the more we tried. For example, prompting as in our \textit{search mode} versus trying to find the construction directly resulted in more efficient programs and much better results in the former case. Moreover, in the hands of a user who is a subject expert in the particular problem that is being attempted, \AlphaEvolve has always performed much better than in the hands of another user who is not a subject expert: we have found that the advice one gives to \AlphaEvolve in the prompt has a significant impact on the quality of the final construction. Giving \AlphaEvolve an insightful piece of expert advice in the prompt almost always led to significantly better results: indeed, \AlphaEvolve will always simply try to squeeze the most out of the advice it was given, while retaining the gist of the original advice.
+We stress that we think that, in general, it was the combination of human expertise and the computational capabilities of \AlphaEvolve that led to the best results overall.
+
+
+An interesting finding for promoting the discovery of broadly applicable algorithms is that generalization improves when the system is provided with a more constrained set of inputs or features. Having access to a large amount of data does not necessarily imply better generalization performance. Instead, when we were looking for interpretable programs that generalize across a wide range of the parameters, we constrained \AlphaEvolve to have access to less data by showing it the previous best solutions only for small values of $n$  (see for example Problems \ref{block_stacking}, \ref{imo}, \ref{nikodym}). This ``less is more'' approach appears to  encourage the emergence of more fundamental ideas. Looking ahead, a significant step toward greater autonomy for the system would be to enable \AlphaEvolve to select its own hyperparameters, adapting its search strategy dynamically. 
+
+Results are also significantly improved when the system is trained on correlated problems or a family of related problem instances within a single experiment. For example, when exploring geometric problems, tackling configurations with various numbers of points $n$ and dimensions $d$ simultaneously is highly effective. A search heuristic that performs well for a specific $(n,d)$ pair will likely be a strong foundation for others, guiding the system toward more universal principles. 
+
+
+We have found that \AlphaEvolve excels at discovering constructions that were already  within reach of current mathematics, but had not yet been discovered due to the amount of time and effort required to find the right combination of standard ideas that works well for a particular problem. On the other hand, for problems where genuinely new, deep insights are required to make progress, \AlphaEvolve is likely not the right tool to use. In the future, we envision that tools like \AlphaEvolve could be used to systematically assess the difficulty of large classes of mathematical bounds or conjectures. This could lead to a new type of classification, allowing researchers to semi-automatically label certain inequalities as ``\AlphaEvolve-hard'', indicating their resistance to \AlphaEvolve-based methods. Conversely, other problems could be flagged as being amenable to further attacks by both theoretical and computer-assisted techniques, thereby directing future research efforts more effectively.
+
+
+\section{Future work}
+The mathematical developments in \AlphaEvolve represent a significant step toward automated mathematical discovery, though there are many future directions that are wide open. Given the nature of the human-machine interface, we imagine a further incorporation of a computer-assisted proof into the output of \AlphaEvolve in the future, leading to \AlphaEvolve first finding the candidate, then providing the e.g. Lean code of such computer-assisted proof to validate it, all in an automatic fashion. In this work, we have demonstrated that in rare cases this is already possible, by providing an example of a full pipeline from discovery to formalization, leading to further insights that when combined with human expertise yield stronger results. This paper represents a first step of a long-term goal that is still in progress, and we expect to explore more in this direction. 
+The line drawn by this paper is solely due to human time and paper length constraints, but not by our computational capabilities. Specifically, in some of the problems we believe that (ongoing and future) further exploration might lead to more and better results.
+
+
+
+\textbf{Acknowledgements:} JGS has been partially supported by the MICINN (Spain) research grant number PID2021–
+125021NA–I00; by NSF under Grants DMS-2245017, DMS-2247537 and DMS-2434314; and by a Simons Fellowship. This material is based upon work supported by a grant from the Institute
+for Advanced Study School of Mathematics. TT was supported by the James and Carol Collins Chair, the Mathematical Analysis \& Application Research Fund, and by NSF grants DMS-2347850, and is particularly grateful to recent donors to the Research Fund. 
+
+
+
+We are grateful for contributions, conversations and support from Matej Balog, Henry Cohn, Alex Davies, Demis Hassabis, Ray Jiang, Pushmeet Kohli, Freddie Manners, Alexander Novikov, Joaquim Ortega-Cerd\`a, Abigail See, Eric Wieser, Junyan Xu, Daniel Zheng, and Goran \v{Z}u\v{z}i\'c. We are also grateful to Alex B\"auerle, Adam Connors, Lucas Dixon, Fernanda Viegas, and Martin Wattenberg for their work on creating the user interface for \AlphaEvolve that lets us publish our experiments so others can explore them.
+
+
+%\bibliographystyle{plain}

@@ -1,0 +1,185 @@
+%\pdfoutput=1
+\documentclass[10pt,a4paper,reqno]{amsart}
+\setcounter{tocdepth}{3} 
+\newcommand\hmmax{0}
+\newcommand\bmmax{0}
+\usepackage{amssymb}
+\usepackage{etoc}
+\usepackage{amscd}
+\usepackage{soul}
+\usepackage{float}
+\usepackage{color,colortbl}
+\usepackage[pdftex,pdfpagelabels]{hyperref}
+\usepackage{enumerate}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{tikz-cd}
+\usepackage{fontawesome5}
+\usepackage{stix}
+\usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, decorations.pathreplacing, calc}
+
+\DeclareMathAlphabet\mathbfcal{LS2}{stixcal}{b}{n}
+\numberwithin{equation}{section}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage[export]{adjustbox}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+% --- CUSTOM THEOREM SETUP ---
+
+% 1. Define a command to hold the URL for the current problem.
+%    This acts as a variable that you can change for each problem.
+\newcommand{\problemURL}{https://example.com/default-problem}
+
+% 2. Define a new theorem style using \newtheoremstyle.
+\newtheoremstyle{hyperlinkproblem}
+  {\bigskipamount}{\bigskipamount}   % Spacing above and below
+  {\itshape}           % Body font (same as the 'plain' style)
+  {}                   % Indent amount (empty = no indent)
+  {\bfseries}          % Theorem head font
+  {.}                  % Punctuation after theorem head
+  {.5em}               % Space after theorem head
+  % Custom head specification using the \problemURL command
+  % The arguments are #1=Name, #2=Number, #3=Note (optional title)
+  {\href{\problemURL}{\thmname{#1}\thmnumber{ #2}}\thmnote{ (#3)}}
+
+
+\usepackage{mathtools}%                  http://www.ctan.org/pkg/mathtools
+\usepackage[tableposition=top]{caption}% http://www.ctan.org/pkg/caption
+\usepackage{booktabs,dcolumn}%           http://www.ctan.org/pkg/dcolumn + http://www.ctan.org/pkg/booktabs
+
+
+
+
+
+\DeclareMathOperator*\swan{swan}
+\DeclareMathOperator*\cond{cond}
+\DeclareMathOperator*\Gal{Gal}
+
+\newcommand{\FT}{\mathrm{FT}}
+\newcommand{\Kl}{\mathcal{K}\ell}
+
+\DeclareFontFamily{OT1}{rsfs}{}
+\DeclareFontShape{OT1}{rsfs}{n}{it}{<-> rsfs10}{}
+\DeclareMathAlphabet{\mathscr}{OT1}{rsfs}{n}{it}
+
+\addtolength{\textwidth}{3 truecm}
+\addtolength{\textheight}{1 truecm}
+\setlength{\voffset}{-.6 truecm}
+\setlength{\hoffset}{-1.3 truecm}
+
+\theoremstyle{plain}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{heuristic}[theorem]{Heuristic}
+\newtheorem{principle}[theorem]{Principle}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{claim}[theorem]{Claim}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+
+\theoremstyle{hyperlinkproblem}
+\newtheorem{problem}[theorem]{Problem}
+
+\renewcommand\P{\mathbb{P}}
+\newcommand\E{\mathbb{E}}
+\newcommand\Var{\mathrm{Var}}
+\newcommand\R{\mathbb{R}}
+\newcommand\Z{\mathbb{Z}}
+\newcommand\F{\mathbf{F}}
+\newcommand\N{\mathbb{N}}
+\newcommand\n{\mathbf{n}}
+\renewcommand\a{\mathbf{a}}
+\renewcommand\b{\mathbf{b}}
+\renewcommand\j{\mathbf{j}}
+\renewcommand\k{\mathbf{k}}
+\renewcommand\t{\mathbf{t}}
+\renewcommand\r{\mathbf{r}}
+\renewcommand\l{\mathbf{l}}
+\newcommand\X{\mathbf{X}}
+\newcommand\T{\mathbf{T}}
+\newcommand\Y{\mathbf{Y}}
+\newcommand\A{\mathbf{A}}
+\newcommand\W{\mathbf{W}}
+\newcommand\C{\mathbb{C}}
+\newcommand\Q{\mathbb{Q}}
+\renewcommand\Re{{\operatorname{Re}}}
+\renewcommand\Im{{\operatorname{Im}}}
+\newcommand\Log{{\operatorname{Log}}}
+\newcommand\lcm{{\operatorname{lcm}}}
+\renewcommand\gcd{{\operatorname{gcd}}}
+\newcommand\sinc{{\operatorname{sinc}}}
+\newcommand\eps{\varepsilon}
+\newcommand\deriv{\zeta}
+\newcommand\zero{\lambda}
+\newcommand\Kakeya{{\operatorname{Kakeya}}}
+\newcommand\Nikodym{{\operatorname{Nikodym}}}
+
+\newcommand{\AlphaEvolve}{\texttt{AlphaEvolve}\xspace}
+\newcommand{\AlphaProof}{\texttt{AlphaProof}\xspace}
+\newcommand{\AlphaGeometry}{\texttt{AlphaGeometry}\xspace}
+\newcommand{\DeepThink}{\texttt{Deep Think}\xspace}
+\newcommand{\Repo}{\href{https://github.com/google-deepmind/alphaevolve_repository_of_problems}{Repository of Problems }}
+
+
+\renewcommand{\mod}{\bmod}
+
+\parindent 0mm
+\parskip   5mm
+
+
+\begin{document}
+
+
+\title{Mathematical exploration and discovery at scale}
+
+\author[Bogdan Georgiev]{Bogdan Georgiev}
+\author[Javier G\'omez-Serrano]{Javier G\'omez-Serrano}
+\author[Terence Tao]{Terence Tao}
+\author[Adam Zsolt Wagner]{Adam Zsolt Wagner}
+
+\address[Bogdan Georgiev]{Google DeepMind, Handyside Street, Kings Cross, London N1C 4UZ, UK}
+\email{bogeorgiev@google.com}
+
+\address[Javier G\'omez-Serrano]{Department of Mathematics, Brown University, 314 Kassar House, 151 Thayer St., Providence, RI 02912, USA \\
+Institute for Advanced Study, 1 Einstein Drive, Princeton, NJ 08540, USA}
+\email{javier\_gomez\_serrano@brown.edu}
+
+\address[Terence Tao]{UCLA Department of Mathematics, Los Angeles, CA 90095-1555.}
+\email{tao@math.ucla.edu}
+
+\address[Adam Zsolt Wagner]{Google DeepMind, Handyside Street, Kings Cross, London N1C 4UZ, UK}
+\email{azwagner@google.com}
+
+
+\include{main_body}
+\include{appendix}
+
+
+
+
+\end{document}

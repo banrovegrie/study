@@ -1,0 +1,74 @@
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[
+    % Style for the blocks
+    block/.style={
+        rectangle,
+        draw,
+        thick,
+        fill=blue!50!cyan!30,
+        minimum width=4cm,
+        minimum height=1cm,
+        font=\sffamily,
+        outer sep=0pt
+    }
+]
+
+    % --- Settings ---
+    \def\numblocks{5}
+    \def\blockwidth{4} 
+    \def\blockheight{1}
+
+    % --- Draw Blocks ---
+    \coordinate (current_anchor_pos) at (0, {(\numblocks - 1) * \blockheight});
+
+    \foreach \k in {1,...,\numblocks} {
+        \node[block, anchor=south east] (block\k) at (current_anchor_pos) {Block {\the\numexpr\numblocks-\k+1\relax}};
+        
+        \ifnum\k<\numblocks
+            \pgfmathsetmacro{\overhang}{\blockwidth/(2*\k)}
+            \coordinate (current_anchor_pos) at ($(current_anchor_pos) + (-\overhang, -\blockheight)$);
+        \fi
+    }
+
+    % --- Draw Table ---
+    \pgfmathsetmacro{\finalOverhang}{\blockwidth/(2*\numblocks)}
+    \coordinate (table_edge) at ($(block\numblocks.south east) + (-\finalOverhang, 0)$);
+    
+    \draw[line width=3pt, brown!60] (table_edge) -- ++(0, -1.5*\blockheight); 
+    \draw[line width=3pt, brown!60] (table_edge) -- ++(-2, 0);
+
+    % --- Draw Annotations for Overhangs ---
+    % Individual overhangs between blocks
+    \foreach \k in {1,...,\numexpr\numblocks-1\relax} {
+        \pgfmathsetmacro{\overhangVal}{\blockwidth/(2*\k)}
+        \pgfmathsetmacro{\denominator}{2*\k}
+        \coordinate (current_block_right_edge) at (block\k.south east);
+
+        % MODIFICATION: Arrow and number moved up (offset changed to -0.3)
+        \draw[<->, >=Latex, dashed, gray]
+            ($(current_block_right_edge) + (0,-0.3)$) -- 
+            ($(current_block_right_edge) + (-\overhangVal,-0.3)$) 
+            node[below, font=\footnotesize\sffamily, midway] {$\frac{1}{\pgfmathprintnumber{\denominator}}$};
+    }
+    
+    % Annotation for the bottom block's overhang over the table
+    \pgfmathsetmacro{\finalDenominator}{2*\numblocks}
+    \coordinate (bottom_block_right_edge) at (block\numblocks.south east);
+
+    % MODIFICATION: Arrow and number moved up (offset changed to -0.3)
+    \draw[<->, >=Latex, dashed, gray]
+        ($(bottom_block_right_edge) + (0,-0.3)$) --
+        ($(table_edge) + (0,-0.3)$) node[below, font=\footnotesize\sffamily, midway] {$\frac{1}{\pgfmathprintnumber{\finalDenominator}}$};
+
+    % --- Total Overhang Annotation ---
+    \coordinate (top_right_anno) at ($(block1.north east) + (0, 0.4)$);
+    \draw[<->, >=Latex, thick, red] 
+        (table_edge |- top_right_anno) -- 
+        node[above, midway, fill=white, inner sep=2pt] {Total Overhang $= \frac{1}{2}H_n$} 
+        (top_right_anno);
+
+\end{tikzpicture}
+\caption{A stack of $n=5$ blocks arranged to achieve maximum overhang.}
+\label{fig:block_stacking}
+\end{figure}
