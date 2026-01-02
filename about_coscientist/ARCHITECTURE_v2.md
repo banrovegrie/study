@@ -1,4 +1,4 @@
-# Kepler: AI Co-Mathematician Architecture v2
+# Kepler
 
 SYSTEM (with Claude Code as ORCHESTRATOR) = META + SKILLS + TOOLS + RUNTIME + MEMORY, where:
 
@@ -8,7 +8,7 @@ TOOLS = Lean verification, computation, knowledge base queries
 RUNTIME = Execution environment, sandbox, resource management
 MEMORY = WORKING (local world model) + LIBRARY (global world model)
 
-## Architecture Overview
+## Architecture
 
 ```
                                     PROBLEM
@@ -66,9 +66,7 @@ MEMORY = WORKING (local world model) + LIBRARY (global world model)
                                 └─────────────┘
 ```
 
----
-
-## META: The Alignment Layer
+## META: The Alignment and Planning Layer
 
 META is the "constitution" that guides all decisions—the WHY behind what Kepler does.
 
@@ -205,16 +203,16 @@ The global world model is the **accumulated knowledge** of all runs.
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
 │  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │                     POSTGRESQL (Documents + Vectors)                       │  │
-│  │                                                                            │  │
-│  │  theorems                         proofs                                   │  │
-│  │  ├── id, name, module             ├── id, problem_id, problem_text         │  │
-│  │  ├── statement, type_signature    ├── solution_lean                        │  │
-│  │  ├── docstring, tags[]            ├── exploration_tree (jsonb)             │  │
-│  │  ├── embedding (vector)           ├── technique_trace[]                    │  │
-│  │  └── neo4j_node_id                ├── problem_embedding (vector)           │  │
-│  │                                   └── lessons[]                            │  │
-│  │  documents                                                                 │  │
+│  │                     POSTGRESQL (Documents + Vectors)                      │  │
+│  │                                                                           │  │
+│  │  theorems                         proofs                                  │  │
+│  │  ├── id, name, module             ├── id, problem_id, problem_text        │  │
+│  │  ├── statement, type_signature    ├── solution_lean                       │  │
+│  │  ├── docstring, tags[]            ├── exploration_tree (jsonb)            │  │
+│  │  ├── embedding (vector)           ├── technique_trace[]                   │  │
+│  │  └── neo4j_node_id                ├── problem_embedding (vector)          │  │
+│  │                                   └── lessons[]                           │  │
+│  │  documents                                                                │  │
 │  │  ├── id, title, content, source                                           │  │
 │  │  ├── embedding (vector)                                                   │  │
 │  │  └── extracted_entity_ids[]                                               │  │
@@ -223,16 +221,16 @@ The global world model is the **accumulated knowledge** of all runs.
 │                                       │ linked by ID                            │
 │                                       ▼                                         │
 │  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │                     NEO4J (Relationships + Structure)                      │  │
-│  │                                                                            │  │
-│  │  NODES                                                                     │  │
+│  │                     NEO4J (Relationships + Structure)                     │  │
+│  │                                                                           │  │
+│  │  NODES                                                                    │  │
 │  │  ├── (:Theorem {id, name, pg_id})                                         │  │
 │  │  ├── (:Concept {id, name, description, embedding})                        │  │
 │  │  ├── (:Technique {id, name, goal_patterns, success_rate})                 │  │
 │  │  ├── (:ProblemType {id, name, description})                               │  │
 │  │  └── (:Community {id, level, summary, embedding})                         │  │
-│  │                                                                            │  │
-│  │  RELATIONSHIPS                                                             │  │
+│  │                                                                           │  │
+│  │  RELATIONSHIPS                                                            │  │
 │  │  ├── (Theorem)-[:DEPENDS_ON]->(Theorem)                                   │  │
 │  │  ├── (Theorem)-[:USES]->(Concept)                                         │  │
 │  │  ├── (Concept)-[:RELATED_TO {weight}]->(Concept)                          │  │
@@ -241,8 +239,8 @@ The global world model is the **accumulated knowledge** of all runs.
 │  │  ├── (Technique)-[:OFTEN_FOLLOWED_BY {count}]->(Technique)                │  │
 │  │  ├── (Technique)-[:IF_STUCK_TRY {condition}]->(Technique)                 │  │
 │  │  └── (Community)-[:CONTAINS]->(*)                                         │  │
-│  │                                                                            │  │
-│  │  COMMUNITIES (auto-generated via Leiden algorithm)                         │  │
+│  │                                                                           │  │
+│  │  COMMUNITIES (auto-generated via Leiden algorithm)                        │  │
 │  │  ├── L0: Fine-grained clusters (~100s)                                    │  │
 │  │  ├── L1: Medium clusters (~20s)                                           │  │
 │  │  └── L2: Broad themes (~5)                                                │  │
@@ -275,37 +273,37 @@ A technique from number theory becomes applicable to combinatorics if the **goal
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  1. INGEST                                                                  │
-│     ├── Papers (arXiv, journals)                                           │
-│     ├── Mathlib updates (new theorems)                                     │
-│     ├── Competition problems (Putnam, IMO)                                 │
-│     └── Our completed proofs                                               │
+│     ├── Papers (arXiv, journals)                                            │
+│     ├── Mathlib updates (new theorems)                                      │
+│     ├── Competition problems (Putnam, IMO)                                  │
+│     └── Our completed proofs                                                │
 │                                                                             │
 │  2. EXTRACT                                                                 │
-│     ├── Theorems: statement, type, dependencies                            │
-│     ├── Concepts: mathematical ideas present                               │
-│     ├── Techniques: proof methods used                                     │
-│     └── Relationships: what connects to what                               │
+│     ├── Theorems: statement, type, dependencies                             │
+│     ├── Concepts: mathematical ideas present                                │
+│     ├── Techniques: proof methods used                                      │
+│     └── Relationships: what connects to what                                │
 │                                                                             │
 │  3. DECONTEXTUALIZE                                                         │
-│     ├── Extract technique from original context                            │
-│     ├── Index by STRUCTURAL APPLICABILITY                                  │
-│     │   • Goal pattern it solves                                           │
-│     │   • Preconditions required                                           │
-│     │   • What it enables next                                             │
-│     └── NOT by topic                                                       │
+│     ├── Extract technique from original context                             │
+│     ├── Index by STRUCTURAL APPLICABILITY                                   │
+│     │   • Goal pattern it solves                                            │
+│     │   • Preconditions required                                            │
+│     │   • What it enables next                                              │
+│     └── NOT by topic                                                        │
 │                                                                             │
 │  4. EMBED                                                                   │
-│     └── Generate vector embeddings for semantic search                     │
+│     └── Generate vector embeddings for semantic search                      │
 │                                                                             │
 │  5. GRAPH                                                                   │
-│     ├── Add nodes to Neo4j                                                 │
-│     ├── Create relationships                                               │
-│     └── Recompute communities (Leiden)                                     │
+│     ├── Add nodes to Neo4j                                                  │
+│     ├── Create relationships                                                │
+│     └── Recompute communities (Leiden)                                      │
 │                                                                             │
 │  6. PROMOTE                                                                 │
-│     ├── High success rate techniques → higher retrieval weight             │
-│     ├── Frequently used theorems → prioritize                              │
-│     └── Community summaries → regenerate periodically                      │
+│     ├── High success rate techniques → higher retrieval weight              │
+│     ├── Frequently used theorems → prioritize                               │
+│     └── Community summaries → regenerate periodically                       │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
