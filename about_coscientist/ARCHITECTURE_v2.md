@@ -41,10 +41,7 @@ MEMORY = WORKING (local world model) + LIBRARY (global world model)
 │                                                                                  │
 │                           VERIFICATION CASCADE                                   │
 │                                                                                  │
-│   NUMERICAL ──▶ ARGUMENT ──▶ SYMBOLIC ──▶ TYPE-LEVEL ──▶ TACTIC ──▶ FULL         │
-│                                                                                  │
-│   fast/cheap              ◀── iterate here ──▶                    slow/certain   │
-│   sanity check            md + latex + lean + sorry               no sorry's     │
+│    NUMERICAL ─▶ SYMBOLIC ─▶ TYPE-LEVEL ─▶ TACTIC ─▶ ARGUMENT or just FULL LEAN   |
 │                                                                                  │
 └──────────────────────────────────────────────────────────────────────────────────┘
                                        │
@@ -60,9 +57,9 @@ MEMORY = WORKING (local world model) + LIBRARY (global world model)
                                 ┌─────────────┐
                                 │  FLYWHEEL   │
                                 │             │
-                                │ solve →     │
-                                │ learn →     │
-                                │ solve better│
+                                │   solve →   │
+                                │   learn →   │
+                                │   evolve    │
                                 └─────────────┘
 ```
 
@@ -74,11 +71,9 @@ META is the "constitution" that guides all decisions—the WHY behind what Keple
 META
 ├── SYSTEM CONSTITUTION (CLAUDE.md)
 │   └── Persistent guidance for all runs
-│       ├── GOAL: What Kepler is trying to achieve
-│       ├── VALUES: What makes a good proof/discovery
-│       ├── PHILOSOPHY: How to approach mathematics
+│       ├── GOAL: What are we trying to achieve
+│       ├── VALUES: What is a good approach/discovery/proof and how to make tradeoffs/choices
 │       ├── ACCESS: How to use MEMORY, TOOLS, SKILLS
-│       └── PRIORITIES: How to make tradeoffs
 │
 └── STRATEGIC STATE (planning.json)
     └── Per-run planning for current problem
@@ -249,7 +244,7 @@ The global world model is the **accumulated knowledge** of all runs.
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### Technique Indexing (By Applicability, Not Aboutness)
+#### Technique Indexing (By applicability, not aboutness)
 
 ```
 TECHNIQUE: "Infinite descent"
